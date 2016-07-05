@@ -27,9 +27,11 @@ $(function(){
         }else if(cmd == "cd"){
             re.push("`cd` access denied");
         }else if(cmd.startsWith("sudo")){
-            re.push("`sudo` access denied")
+            re.push("`sudo` access denied");
+        }else if(cmd == "clear"){
+            re.push('clear');
         }else{
-            re.push("Invalid command. Enter \"help\" for a list of commands.");
+            re.push("Invalid command `" + cmd + "` Enter \"help\" for a list of commands.");
         }
         return re;
     }
@@ -37,8 +39,14 @@ $(function(){
     $("#command").keypress(function(event){
         if(event.which == 13){
             event.preventDefault();
+            //check for the clear command
+            if($("#command").html().trim() == 'clear'){
+                $(".response,.sentcommand").remove();
+                $("#command").html("");
+                return;
+            }
             //show the command and make it uneditable
-            var x = "<div class='sentcommend'>";
+            var x = "<div class='sentcommand'>";
             x += $("#precommand").html() + " ";
             x += $("#command").html().trim();
             x += "</div>"
