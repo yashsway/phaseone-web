@@ -45,14 +45,16 @@ nav{
     position: absolute;
     top: 0;
     width: calc(100%-20px);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
     padding: 10px 20px;
     transition: box-shadow 0.5s;
+    filter: blur(5px);
 }
 nav #logo{
     float: left;
+    vertical-align: middle;
     height: auto;
-    width: 30%;
+    width: 20%;
 }
 nav ul{
     float: right;
@@ -72,7 +74,34 @@ nav ul li a{
 section{
     width: 100%;
     height: 100vh;
+    padding-top: 30px;
 }
 #about{
-
+    padding: 25%;
+}
+#about #terminal{
+    display: block;
+    width: 50%;
+    height: 50%;
+    color: #FF5858;
+    padding: 10px;
+    border: 1px solid #FF5858;
+    border-radius: 5px;
+    font-family: serif;
+    font-size: 15px;
+    line-height: 20px;    
+    overflow: scroll;
+}
+#about #terminal .response{
+    padding-left: 20px;
+}
+#about #terminal #precommand{
+    display: inline-block;;
+}
+#about #terminal #command{
+    display: inline-block;
+    height: 20px;
+}
+#about #terminal #command:focus{
+    outline: none;
 }

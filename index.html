@@ -6,6 +6,7 @@
         <link href="css/style.css" rel="stylesheet"/>
         <script src="js/jquery.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/terminal.js"></script>
     </head>
     <body>
         <!-- The first page the visitor sees-->
@@ -34,7 +35,17 @@
                 </ul>
             </nav>
             <section id="about">
-
+                <h2>Learn more about us by talking to us!</h2>
+                <div id="terminal" contenteditable="false">
+                    <div class="sentcommand" contenteditable="false">terminal@PhaseOne:~$ more welcome.txt</div>
+                    <div class="response" contenteditable="false">Welcome to Phase One!</div>
+                    <div class="response" contenteditable="false">For a list of commands type 'help'</div>
+                    <div class="sentcommand" contenteditable="false">terminal@PhaseOne:~$ help</div>
+                    <div class="response" contenteditable="false">about - displays information about Phase One</div>
+                    <div class="response" contenteditable="false">contact - displays contact information</div>
+                    <div id="precommand" contenteditable="false">terminal@PhaseOne:~$ </div>
+                    <div id="command" contenteditable="true"></div>
+                </div>
             </section>
             <section id="teams">
 

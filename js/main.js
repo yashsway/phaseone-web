@@ -16,4 +16,5 @@ $("document").ready(function(){
             });
         }
     });
+    $("section").css({paddingTop:$("nav").height()+40});    
 });
