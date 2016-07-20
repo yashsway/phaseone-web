@@ -92,11 +92,7 @@ nav ul li a{
 
 section{
     min-width: 100%;
-<<<<<<< HEAD
     height: 90vh;
-=======
-    height: 100vh;
->>>>>>> origin/master
     padding-top: 30px;
 }
 #about{
@@ -112,16 +108,11 @@ section{
     border-radius: 5px;
     font-family: 'Inconsolata';
     font-size: 15px;
-<<<<<<< HEAD
     line-height: 20px;    
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 15px 1px rgba(255,88,88,0.7);
     -moz-box-shadow: 0px 0px 15px 1px rgba(255,88,88,0.7);
     box-shadow: 0px 0px 15px 1px rgba(255,88,88,0.7);
-=======
-    line-height: 20px;
-    overflow: scroll;
->>>>>>> origin/master
 }
 #about #terminal .response{
     padding-left: 20px;
