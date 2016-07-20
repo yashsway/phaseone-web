@@ -4,16 +4,19 @@
         <meta charset="utf-8">
         <title>Phase One</title>
         <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.1.1/gridlex.min.css">
         <script src="js/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/terminal.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!-- The first page the visitor sees-->
         <div id="welcome">
             <div id="image-overlay"></div>
             <img id="logo" src="images/logo.png"  />
-            <a href="#">ENTER</a>
+            <a href="#about" id="arrows"><img src="images/arrows-white.png"/></a>
         </div>
         <!-- Start the main section -->
         <div id="main">
@@ -32,6 +35,9 @@
                     <li>
                         <a href="#">Get in Touch</a>
                     </li>
+                    <li class="slidebutton">
+                    	<a href="#">Slide into our DMs</a>
+                    </li>
                 </ul>
             </nav>
             <section id="about">
@@ -46,10 +52,38 @@
                     <div id="precommand" contenteditable="false">terminal@PhaseOne:~$ </div>
                     <div id="command" contenteditable="true"></div>
                 </div>
+                <a href="#projects" id="arrows"><img src="images/arrows-black.png"/></a>
             </section>
-            <section id="teams">
-
-            </section>
+            <div id="projects">
+	            <div class="deltahacks project">
+	            	<img src="images/dh-logo.png" />
+	            	<div class="content">
+	            		<h2>DeltaHacks</h2>
+	            		<div class="description"><p>Lorem ipsum dolor sit amet, labores epicuri principes eam ea, id suavitate rationibus sed. Dolor virtute labores ut cum, quo ei noluisse placerat. Dicant virtute mel no, choro doming cu cum, ei quo movet dolor. Sit option delenit cu, cibo scribentur cum et. Suavitate percipitur ad mea. Id qui sumo cibo, error forensibus neglegentur per no. Facete elaboraret no vim. Duo an habemus persequeris suscipiantur. Te sea verterem tacimates dissentiet. Id pri praesent mediocrem persecuti, eu mel inani congue, in nonumy antiopam argumentum ius. Nam eu labitur senserit. Mea purto graeci instructior et, soluta iriure vis te, in pro saepe alterum philosophia. Vix natum latine ne. Clita aliquid ancillae ei mel, melius reformidans ea sit.</p></div>
+	            	</div>
+	            </div>
+	            <div class="teamx project">
+	            	<div class="content">
+	            		<h2>TeamX</h2>
+	            		<div class="description"></div>
+	            	</div>
+	            	<img src="images/dh-logo.png" />
+	            </div>
+	            <div class="codenights project">
+	            	<img src="images/dh-logo.png" />
+	            	<div class="content">
+	            		<h2>Code Nights</h2>
+	            		<div class="description"></div>
+	            	</div>
+	            </div>
+	            <div class="blah project">
+	            	<div class="content">
+	            		<h2>IDK</h2>
+	            		<div class="description"></div>
+	            	</div>
+	            	<img src="images/dh-logo.png" />
+	            </div>
+            </div>
         </div>
     </body>
 </html>
