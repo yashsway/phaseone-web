@@ -1,5 +1,9 @@
 $("document").ready(function(){
-    var navTopDelta = $("#about").offset().top+1;
+    if(window.location.href.endsWith("work.html")){
+        var navTopDelta = $("#work").offset().top+1;
+    }else{
+        var navTopDelta = $("#about").offset().top+1;
+    }
     $(window).scroll(function(){
         var currentScroll = $(window).scrollTop();
         if(currentScroll >= navTopDelta){
@@ -16,5 +20,5 @@ $("document").ready(function(){
             });
         }
     });
-    $("section").css({paddingTop:$("nav").height()+40});    
+    $("section").css({paddingTop:$("nav").height()+40});
 });
