@@ -204,3 +204,84 @@ section{
     color: white;
     margin: 0;
 }
+
+#lab{
+    
+}
+#lab #timeline{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+}
+#lab #timeline .bubble{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+}
+#lab #timeline .bubble pic, #lab #timeline .bubble description{
+    display: none;
+    width: 0;
+    height: 0;
+}
+#lab #timeline .bubble:focus{
+    outline: none;    
+    background-color: lightcoral;
+}
+#lab #timeline #bubble-cursor{
+    opacity: 0;
+    position: absolute;  
+    bottom: -50px;    
+    width: 80px;
+    height: 50px;
+    transition: opacity 0.25s;
+}
+#lab #timeline #bubble-cursor svg{
+    /* box-shadow: 0 25px 25px gray;*/
+    filter:drop-shadow(0 25px 25px gray);
+    -webkit-filter: drop-shadow(0 10px 10px gray);
+}
+#lab #timeline #bubble-cursor #bubble-cursor-content{
+    position: absolute;
+    top: 50%;
+    width: 350%;
+    color: white;
+    text-align: center;
+    padding: 50% 10%;
+}
+#lab #details{
+    display: none;
+    margin-top: 10%;
+    padding: 0 20px;
+    padding-bottom: 10px;
+}
+#lab #lab-image{
+    display: block;
+    width: 100%;
+}
+#lab #details h3{
+    padding: 0 20px;
+}
+#lab #lab-description{
+    padding: 20px;
+}
+#lab #lab-progress{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background:black;
+}
+#lab #lab-progress #bar{
+    width: 80%;
+    height: inherit;
+    background: red;
+    border-radius: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

@@ -111,8 +111,7 @@
 	      <div style="float:left;height:100%;width:30%">
 		<img id="lab-image"  width="30%"/>
 		<div id="lab-progress">
-		  <div id="bar">
-		    
+		  <div id="bar">		    
 		  </div>
 		</div>
 	      </div>
