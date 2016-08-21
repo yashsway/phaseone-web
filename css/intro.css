@@ -310,6 +310,9 @@ table {
   h2,
   h3 {
     page-break-after: avoid; } }
+* {
+  box-sizing: border-box; }
+
 html, body {
   min-height: 100%;
   overflow: hidden; }
@@ -323,7 +326,6 @@ svg {
   width: 100%; }
 
 .container {
-  box-sizing: border-box;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -335,7 +337,6 @@ svg {
   height: 100%; }
 
 #logo {
-  box-sizing: border-box;
   align-self: center;
   color: white;
   font-weight: 900;
@@ -348,11 +349,3 @@ svg {
   font-size: 25px;
   font-weight: 900;
   color: #425760; }
-
-/*#circle {
-    fill: white;
-    scale: 3;
-}
-#circle2 {
-    transform: translate(200px,0px);
-}*/
