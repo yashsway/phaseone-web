@@ -5,15 +5,9 @@
 Custom Font Sets
 ----------------*/
 @font-face {
-  font-family: "Bariol";
-  src: url(../assets/fonts/bariol_regular/bariol_regular_webfont.eot) format("eot"), url(../assets/fonts/bariol_regular/bariol_regular_webfont.ttf) format("truetype"), url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff) format("woff"), url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff2) format("woff2"), url(../assets/fonts/bariol_regular/bariol_regular_webfont.otf) format("opentype"); }
-@font-face {
-  font-family: "Aleo";
-  src: url(../assets/fonts/aleo_regular/aleo_regular_webfont.eot) format("eot"), url(../assets/fonts/aleo_regular/aleo_regular_webfont.ttf) format("truetype"), url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff) format("woff"), url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff2) format("woff2"); }
-@font-face {
-  font-family: "Erato";
-  src: url(../assets/fonts/erato_light/erato_light.otf) format("opentype"); }
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+  font-family: "Brandon Text";
+  src: url(../assets/fonts/brandon_text/brandon-text-regular.ttf) format("truetype"), url(../assets/fonts/brandon_text/brandon-text-regularitalic.woff) format("woff"), url(../assets/fonts/brandon_text/brandon-text-medium.ttf) format("truetype"), url(../assets/fonts/brandon_text/brandon-text-bold.woff) format("woff"), url(../assets/fonts/brandon_text/brandon-text-medumitalic.ttf) format("truetype"), url(../assets/fonts/brandon_text/brandon-text-bold.ttf) format("truetype"), url(../assets/fonts/brandon_text/brandon-text-bolditalic.ttf) format("truetype"); }
+/* Basic Boilerplate */
 html {
   max-width: 100% !important;
   color: #222;
@@ -65,13 +59,13 @@ textarea {
 /* Default typography
 --------------------- */
 .primary-text-color {
-  color: #E56B62; }
+  color: #FFD400; }
 
 .secondary-text-color {
-  color: #FFF2F1; }
+  color: #FFFDF5; }
 
 .tertiary-text-color {
-  color: #312C35; }
+  color: #6E9AB2; }
 
 .primary-font, .primary-title, .secondary-title, .tertiary-title, .optional-title, .sub-title, .description-text {
   font-family: "Bariol", sans-serif; }
@@ -90,32 +84,32 @@ body {
   font-kerning: auto; }
 
 .primary-title {
-  color: #E56B62;
+  color: #FFD400;
   font-size: 4.248em;
   line-height: 18px; }
 
 .secondary-title {
-  color: #312C35;
+  color: #425760;
   font-size: 3.374em;
   line-height: 20px; }
 
 .tertiary-title {
-  color: #B958AC;
+  color: #6E9AB2;
   font-size: 2.50em;
   line-height: 15px; }
 
 .optional-title {
-  color: #463F4C;
+  color: #919DA2;
   font-size: 1.938em;
   line-height: 5px; }
 
 .sub-title {
-  color: #BF5952;
+  color: #DDB300;
   font-size: 1.517em;
   line-height: 2px; }
 
 .description-text {
-  color: #463F4C;
+  color: #919DA2;
   font-size: 1em;
   letter-spacing: 0.4px;
   line-height: 25px; }
@@ -160,12 +154,12 @@ footer {
   width: 90%;
   top: 20px;
   left: 5%;
-  background-color: #FFF2F1;
+  background-color: #FFFDF5;
   box-shadow: 0px 3px 5px 0px rgba(70, 63, 76, 0.3);
   padding: 20px; }
 
 .card {
-  color: #FFF2F1;
+  color: #FFFDF5;
   background: #463F4C;
   box-shadow: 0px 3px 0px 0px #312C35, 0px 3px 0px 0px rgba(70, 63, 76, 0.5); }
 

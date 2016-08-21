@@ -1,14 +1,16 @@
 //Colors
-$primary-color: #E56B62;
-$primary-alt-1-color: #BF5952;
-$primary-alt-2-color: #FFF2F1;
-$secondary-color: #312C35;
-$secondary-alt-1-color: #171519;
-$secondary-alt-2-color: #463F4C;
-$tertiary-color: #B958AC;
-$tertiary-alt-1-color: #502352;
-$tertiary-alt-2-color: #FEC9FC;
-$tertiary-alt-3-color: #D278C6;
+$primary-color: #FFD400;
+$primary-alt-1-color: #DDB300;
+$primary-alt-2-color: #FFFDF5;
+$secondary-color: #425760;
+$secondary-alt-1-color: #202426;
+$secondary-alt-2-color: #919DA2;
+$secondary-alt-3-color: #dbdee0;
+$tertiary-color: #6E9AB2;
+$tertiary-alt-1-color: #3B5C6E;
+$tertiary-alt-2-color: #BCD0DB;
+$tertiary-alt-3-color: #1D2E37;
+$tertiary-alt-4-color: #f3f7f9;
 //Box-sizing default
 * {
     box-sizing: border-box;
@@ -17,25 +19,16 @@ $tertiary-alt-3-color: #D278C6;
 Custom Font Sets
 ----------------*/
 @font-face {
-    font-family: "Bariol";
-    src: url(../assets/fonts/bariol_regular/bariol_regular_webfont.eot) format("eot"),
-         url(../assets/fonts/bariol_regular/bariol_regular_webfont.ttf) format("truetype"),
-         url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff) format("woff"),
-         url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff2) format("woff2"),
-        url(../assets/fonts/bariol_regular/bariol_regular_webfont.otf) format("opentype");
+    font-family: "Brandon Text";
+    src: url(../assets/fonts/brandon_text/brandon-text-regular.ttf) format("truetype"),
+         url(../assets/fonts/brandon_text/brandon-text-regularitalic.woff) format("woff"),
+         url(../assets/fonts/brandon_text/brandon-text-medium.ttf) format("truetype"),
+         url(../assets/fonts/brandon_text/brandon-text-bold.woff) format("woff"),
+         url(../assets/fonts/brandon_text/brandon-text-medumitalic.ttf) format("truetype"),
+         url(../assets/fonts/brandon_text/brandon-text-bold.ttf) format("truetype"),
+         url(../assets/fonts/brandon_text/brandon-text-bolditalic.ttf) format("truetype");
 }
-@font-face {
-    font-family: "Aleo";
-    src: url(../assets/fonts/aleo_regular/aleo_regular_webfont.eot) format("eot"),
-         url(../assets/fonts/aleo_regular/aleo_regular_webfont.ttf) format("truetype"),
-         url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff) format("woff"),
-         url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff2) format("woff2");
-}
-@font-face {
-    font-family: "Erato";
-    src: url(../assets/fonts/erato_light/erato_light.otf) format("opentype");
-}
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/* Basic Boilerplate */
 html {
     max-width: 100% !important;
     color: #222;
@@ -101,7 +94,7 @@ textarea {
     color: $primary-alt-2-color;
 }
 .tertiary-text-color {
-    color: $secondary-color;
+    color: $tertiary-color;
 }
 .primary-font {
     font-family: "Bariol", sans-serif;
