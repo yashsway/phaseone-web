@@ -1,0 +1,386 @@
+//Colors
+$primary-color: #E56B62;
+$primary-alt-1-color: #BF5952;
+$primary-alt-2-color: #FFF2F1;
+$secondary-color: #312C35;
+$secondary-alt-1-color: #171519;
+$secondary-alt-2-color: #463F4C;
+$tertiary-color: #B958AC;
+$tertiary-alt-1-color: #502352;
+$tertiary-alt-2-color: #FEC9FC;
+$tertiary-alt-3-color: #D278C6;
+//Box-sizing default
+* {
+    box-sizing: border-box;
+}
+/*
+Custom Font Sets
+----------------*/
+@font-face {
+    font-family: "Bariol";
+    src: url(../assets/fonts/bariol_regular/bariol_regular_webfont.eot) format("eot"),
+         url(../assets/fonts/bariol_regular/bariol_regular_webfont.ttf) format("truetype"),
+         url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff) format("woff"),
+         url(../assets/fonts/bariol_regular/bariol_regular_webfont.woff2) format("woff2"),
+        url(../assets/fonts/bariol_regular/bariol_regular_webfont.otf) format("opentype");
+}
+@font-face {
+    font-family: "Aleo";
+    src: url(../assets/fonts/aleo_regular/aleo_regular_webfont.eot) format("eot"),
+         url(../assets/fonts/aleo_regular/aleo_regular_webfont.ttf) format("truetype"),
+         url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff) format("woff"),
+         url(../assets/fonts/aleo_regular/aleo_regular_webfont.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Erato";
+    src: url(../assets/fonts/erato_light/erato_light.otf) format("opentype");
+}
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+html {
+    max-width: 100% !important;
+    color: #222;
+    line-height: 1.4;
+    overflow-x: hidden !important;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+/* Default typography
+--------------------- */
+.primary-text-color {
+    color: $primary-color;
+}
+.secondary-text-color {
+    color: $primary-alt-2-color;
+}
+.tertiary-text-color {
+    color: $secondary-color;
+}
+.primary-font {
+    font-family: "Bariol", sans-serif;
+}
+.secondary-font {
+    font-family: "Erato", serif;
+}
+.tertiary-font {
+    font-family: "Aleo", serif;
+}
+body {
+    @extend .tertiary-font;
+    //This size affects all other sizes
+    //font-size: 30%;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+.font-fix {
+    font-kerning: auto;
+}
+.primary-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $primary-color;
+    font-size: 4.248em;
+    line-height: 18px;
+}
+.secondary-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $secondary-color;
+    font-size: 3.374em;
+    line-height: 20px;
+}
+.tertiary-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $tertiary-color;
+    font-size: 2.50em;
+    line-height: 15px;
+}
+.optional-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $secondary-alt-2-color;
+    font-size: 1.938em;
+    line-height: 5px;
+}
+.sub-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $primary-alt-1-color;
+    font-size: 1.517em;
+    line-height: 2px;
+}
+.description-text {
+    @extend .primary-font;
+    @extend .font-fix;
+    color: $secondary-alt-2-color;
+    font-size: 1em;
+    letter-spacing: 0.4px;
+    line-height: 25px;
+}
+.body-text {
+    /* Motivation can take : */
+    @extend .secondary-font;
+    @extend .font-fix;
+    font-size: 1em;
+    color: #171519;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+.detail {
+   @extend .secondary-font;
+   @extend .font-fix;
+   $secondary-alt-2-color: #463F4C;
+   font-size: 0.7em;
+}
+/*
+Default button styles
+---------------------*/
+
+/* Link clear defaults
+-------------------*/
+a:active {
+    outline: 0;
+}
+a:visited {
+    outline: 0;
+}
+/* Shared elements
+------------------*/
+section {
+    display: block;
+}
+footer {
+    clear: both !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.slate {
+    position: relative;
+    display: block;
+    height: auto;
+    width: 90%;
+    top: 20px;
+    left: 5%;
+    background-color: $primary-alt-2-color;
+    box-shadow: 0px 3px 5px 0px rgba(70,63,76,0.30);
+    padding: 20px;
+}
+.card {
+    color: $primary-alt-2-color;
+    background: #463F4C;
+    box-shadow: 0px 3px 0px 0px #312C35, 0px 3px 0px 0px rgba(70,63,76,0.50);
+}
+.profile {
+    img {
+        margin-left: 22%;
+        height: 120px;
+    }
+}
+.icon {
+    height: 45px;
+    width: auto !important;
+    pointer-events: none;
+}
+.icon-small {
+    height: 25px;
+    width: auto !important;
+    pointer-events: fill;
+    &.checkmark:hover {
+        -moz-filter: hue-rorate(225deg);
+        filter: hue-rotate(225deg);
+    }
+}
+table {
+    border-spacing: 5px;
+    empty-cells: show;
+    border: 3px dashed #cbcbcb;
+    thead {
+        background-color: #e0e0e0;
+        text-align: left;
+        vertical-align: bottom;
+        tr {
+            border-bottom: 3px dashed #cdcdcd;
+        }
+    }
+    tfoot {
+        background-color: #e0e0e0;
+        text-align: left;
+        vertical-align: middle;
+    }
+    td, th {
+        padding: 20px;
+    }
+}
+/* Utilities
+--------------*/
+.center-text {
+    text-align: center;
+}
+.zero-margin {
+    margin: 0px;
+}
+.inherit-height {
+    height: inherit;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+/* Centering Hack
+--------------*/
+.content {
+    margin: 0px auto;
+    display: table;
+}
+//First descendant, any element
+.content > * {
+    display: table-cell;
+}
+/* ===============
+    ALL: IE Fixes
+   =============== */
+.ie7 .title {
+    padding-top: 20px;
+}
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

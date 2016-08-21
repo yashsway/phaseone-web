@@ -1,24 +1,102 @@
-$("document").ready(function(){
-    if(window.location.href.endsWith("work.html")){
-        var navTopDelta = $("#work").offset().top+1;
-    }else{
-        var navTopDelta = $("#about").offset().top+1;
+const screenHeight = $(window).height();
+const screenWidth = $(window).width();
+var allCircles = [];
+var count = 0;
+
+var s = Snap("#svg");
+
+//Growth Tween
+const grow = motion.tween({
+    blend: true,
+    duration: 30000,
+    ease: motion.easing.easeInOut,
+    values: {
+        scale: 500
     }
-    $(window).scroll(function(){
-        var currentScroll = $(window).scrollTop();
-        if(currentScroll >= navTopDelta){
-            $("nav").css({
-                position: 'fixed',
-                top: '0',
-                left: '0',
-                boxShadow:'0 2px 2px gray'
-            });
-        }else{
-            $("nav").css({
-                position: 'absolute',
-                boxShadow:'none'
+});
+//Simple ID gen appends an inc count on every call
+function generateID(){
+    count += 1;
+    return 'circle'+count;
+}
+function clean(svgID){
+    $.map(allCircles, function(val,i){
+        if(val.attr('id')==svgID){
+            //Fade out and destroy
+            val.animate({opacity:0},10000,mina.easeInOut,function(){
+                $('#'+val.attr('id'))[0].remove();
             });
         }
     });
-    $("section").css({paddingTop:$("nav").height()+40});
+}
+function animateCircle(svgID){
+    //Set destruction & bind animation
+    grow.set({
+        onComplete: function(state){
+            clean(svgID);
+        }
+    }).on($('#'+svgID)[0]).start();
+}
+function storeCircle(obj){
+    allCircles.push(obj);
+}
+function removeCircle(obj){
+    obj.remove();
+}
+function randomColor(){
+  let choice = Math.floor((Math.random() * 3)+1);
+  switch(choice){
+    case 1:
+      return '#DBDEE0';
+    case 2:
+      return '#BCD0DB';
+    case 3:
+      return '#FFED93';
+  }
+}
+function generateRandomCircles(count = 3){
+    for(let i=0;i<count;i++){
+        let x = Math.floor((Math.random() * screenWidth) + 1)+100;
+        let y = Math.floor((Math.random() * screenHeight) + 1)+0.618033988749895;
+        let unique = generateID();
+        storeCircle(
+            (s.circle(x,y,1)).attr({
+                fill: randomColor(),
+                id: unique
+            })
+        );
+        animateCircle(unique);
+    }
+}
+var begin = setInterval(()=>generateRandomCircles(1),3000);
+//window.onblur(window.clearInterval(begin));
+
+//Old animation need to reconfigure
+/*storeCircle((s.circle(150, 150, 100)).attr({
+    fill: randomColor({hue:'blue', luminosity: 'light', count: 1}),
+    id: generateID()
+}));*/
+//animateCircle(allCircles[0].attr('id'));
+//animateCircle($('#'+allCircles[0].attr('id')).get());
+/*const ball = document.getElementById('ball');
+
+const moveX = motion.track({
+    values: {
+        x: {},
+        y:{}
+    }
 });
+
+const moveBallX = moveX.on(ball);
+
+const changeColor = motion.tween({
+    duration: 2000,
+    ease: motion.easing.easeInOut,
+    values: {
+        backgroundColor: '#2f47f7',
+        height: screenHeight,
+        width: screenHeight
+    }
+});
+
+changeColor.on(ball).start();*/

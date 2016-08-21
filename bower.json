@@ -1,0 +1,35 @@
+{
+  "name": "PhaseOne",
+  "homepage": "https://phaseone.org",
+  "authors": [
+    "Yash Gopal <reach.yashg@gmail.com>"
+  ],
+  "description": "Official website of the student run tech organization housed at McMaster University",
+  "main": "index.html",
+  "keywords": [
+    "tech",
+    "technology",
+    "organization",
+    "mac",
+    "mcmaster",
+    "hackitmac",
+    "hamilton",
+    "hamilton",
+    "tech",
+    "canadian",
+    "startups",
+    "startup",
+    "toronto",
+    "startups",
+    "toronto tech",
+    "tech organization"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
