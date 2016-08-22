@@ -3,7 +3,7 @@ $('body').flowtype({
  minimum   : 500,
  maximum   : 1200,
  minFont   : 8,
- maxFont   : 20,
+ maxFont   : 18,
  fontRatio : 50
 });
 //Usually caps around twice the interval
