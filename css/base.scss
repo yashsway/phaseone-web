@@ -97,13 +97,13 @@ textarea {
     color: $tertiary-color;
 }
 .primary-font {
-    font-family: "Bariol", sans-serif;
+    font-family: "Brandon Text", sans-serif;
 }
 .secondary-font {
-    font-family: "Erato", serif;
+    font-family: "Brandon Text", serif;
 }
 .tertiary-font {
-    font-family: "Aleo", serif;
+    font-family: "Brandon Text", serif;
 }
 body {
     @extend .tertiary-font;
@@ -111,50 +111,67 @@ body {
     //font-size: 30%;
     text-decoration: none;
     overflow-x: hidden;
+    font-size: 16px;
 }
 .font-fix {
     font-kerning: auto;
 }
-.primary-title {
+.section-super-header {
     @extend .font-fix;
     @extend .primary-font;
     color: $primary-color;
-    font-size: 4.248em;
+    font-size: 4.236em;
+    line-height: 18px;
+    font-weight: bold;
+}
+.section-header {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $secondary-color;
+    font-size: 2.618em;
+    font-weight: 800;
+    line-height: 18px;
+}
+.primary-title {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $secondary-color;
+    font-size: 1.999em;
     line-height: 18px;
 }
 .secondary-title {
     @extend .font-fix;
     @extend .primary-font;
     color: $secondary-color;
-    font-size: 3.374em;
+    font-size: 1.618em;
     line-height: 20px;
-}
-.tertiary-title {
-    @extend .font-fix;
-    @extend .primary-font;
-    color: $tertiary-color;
-    font-size: 2.50em;
-    line-height: 15px;
-}
-.optional-title {
-    @extend .font-fix;
-    @extend .primary-font;
-    color: $secondary-alt-2-color;
-    font-size: 1.938em;
-    line-height: 5px;
 }
 .sub-title {
     @extend .font-fix;
     @extend .primary-font;
+    color: $tertiary-color;
+    font-size: 1.414em;
+    line-height: 15px;
+}
+.tagline-text {
+    @extend .font-fix;
+    @extend .primary-font;
+    color: $secondary-alt-2-color;
+    font-size: 1.125em;
+    line-height: 5px;
+}
+.note-text {
+    @extend .font-fix;
+    @extend .primary-font;
     color: $primary-alt-1-color;
-    font-size: 1.517em;
+    font-size: 0.875em;
     line-height: 2px;
 }
 .description-text {
     @extend .primary-font;
     @extend .font-fix;
     color: $secondary-alt-2-color;
-    font-size: 1em;
+    font-size: 0.707em;
     letter-spacing: 0.4px;
     line-height: 25px;
 }
@@ -166,12 +183,6 @@ body {
     color: #171519;
     letter-spacing: 0px;
     line-height: 22px;
-}
-.detail {
-   @extend .secondary-font;
-   @extend .font-fix;
-   $secondary-alt-2-color: #463F4C;
-   font-size: 0.7em;
 }
 /*
 Default button styles

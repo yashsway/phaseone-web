@@ -1,5 +1,3 @@
-const screenHeight = $(window).height();
-const screenWidth = $(window).width();
 var allCircles = [];
 var count = 0;
 
@@ -56,8 +54,11 @@ function randomColor(){
 }
 function generateRandomCircles(count = 3){
     for(let i=0;i<count;i++){
-        let x = Math.floor((Math.random() * screenWidth) + 1)+100;
-        let y = Math.floor((Math.random() * screenHeight) + 1)+0.618033988749895;
+        var screenHeight = $(window).height();
+        var screenWidth = $(window).width();
+        console.log(screenWidth);
+        let x = Math.floor(Math.random() * ((screenWidth-0)+1) + (1));
+        let y = Math.floor((Math.random() * screenHeight) + 1)+1;
         let unique = generateID();
         storeCircle(
             (s.circle(x,y,1)).attr({
@@ -68,7 +69,7 @@ function generateRandomCircles(count = 3){
         animateCircle(unique);
     }
 }
-var begin = setInterval(()=>generateRandomCircles(1),3000);
+var begin = setInterval(()=>generateRandomCircles(1),1000);
 //window.onblur(window.clearInterval(begin));
 
 //Old animation need to reconfigure

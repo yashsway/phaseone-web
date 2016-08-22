@@ -10,9 +10,11 @@ body {
     background: #fff;
     font-family: 'Brandon Text', sans-serif;
 }
-svg {
+#svg {
     height: 100%;
     width: 100%;
+    position: absolute;
+    z-index: -2;
 }
 .container {
     display: flex;
@@ -33,9 +35,7 @@ svg {
     text-align: center;
 }
 #tagline {
-    box-sizing: border-box;
     align-self: center;
-    font-size: 25px;
-    font-weight: 900;
-    color: #425760;
+    @extend .primary-title;
+    padding: 20px;
 }

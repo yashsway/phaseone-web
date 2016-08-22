@@ -67,50 +67,63 @@ textarea {
 .tertiary-text-color {
   color: #6E9AB2; }
 
-.primary-font, .primary-title, .secondary-title, .tertiary-title, .optional-title, .sub-title, .description-text {
-  font-family: "Bariol", sans-serif; }
+.primary-font, .section-super-header, .section-header, .primary-title, #tagline, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text {
+  font-family: "Brandon Text", sans-serif; }
 
-.secondary-font, .body-text, .detail {
-  font-family: "Erato", serif; }
+.secondary-font, .body-text {
+  font-family: "Brandon Text", serif; }
 
 .tertiary-font, body {
-  font-family: "Aleo", serif; }
+  font-family: "Brandon Text", serif; }
 
 body {
   text-decoration: none;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 16px; }
 
-.font-fix, .primary-title, .secondary-title, .tertiary-title, .optional-title, .sub-title, .description-text, .body-text, .detail {
+.font-fix, .section-super-header, .section-header, .primary-title, #tagline, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text, .body-text {
   font-kerning: auto; }
 
-.primary-title {
+.section-super-header {
   color: #FFD400;
-  font-size: 4.248em;
+  font-size: 4.236em;
+  line-height: 18px;
+  font-weight: bold; }
+
+.section-header {
+  color: #425760;
+  font-size: 2.618em;
+  font-weight: 800;
+  line-height: 18px; }
+
+.primary-title, #tagline {
+  color: #425760;
+  font-size: 1.999em;
   line-height: 18px; }
 
 .secondary-title {
   color: #425760;
-  font-size: 3.374em;
+  font-size: 1.618em;
   line-height: 20px; }
 
-.tertiary-title {
+.sub-title {
   color: #6E9AB2;
-  font-size: 2.50em;
+  font-size: 1.414em;
   line-height: 15px; }
 
-.optional-title {
+.tagline-text {
   color: #919DA2;
-  font-size: 1.938em;
+  font-size: 1.125em;
   line-height: 5px; }
 
-.sub-title {
+.note-text {
   color: #DDB300;
-  font-size: 1.517em;
+  font-size: 0.875em;
   line-height: 2px; }
 
 .description-text {
   color: #919DA2;
-  font-size: 1em;
+  font-size: 0.707em;
   letter-spacing: 0.4px;
   line-height: 25px; }
 
@@ -120,9 +133,6 @@ body {
   color: #171519;
   letter-spacing: 0px;
   line-height: 22px; }
-
-.detail {
-  font-size: 0.7em; }
 
 /*
 Default button styles
@@ -321,9 +331,11 @@ body {
   background: #fff;
   font-family: 'Brandon Text', sans-serif; }
 
-svg {
+#svg {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  z-index: -2; }
 
 .container {
   display: flex;
@@ -344,8 +356,5 @@ svg {
   text-align: center; }
 
 #tagline {
-  box-sizing: border-box;
   align-self: center;
-  font-size: 25px;
-  font-weight: 900;
-  color: #425760; }
+  padding: 20px; }
