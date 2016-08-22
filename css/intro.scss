@@ -2,6 +2,9 @@
 * {
     box-sizing: border-box;
 }
+.test {
+    background-color: indianred;
+}
 html, body {
     min-height: 100%;
     overflow:hidden;
@@ -14,10 +17,12 @@ body {
     height: 100%;
     width: 100%;
 }
+#logo-wrapper {
+    height: 85%;
+}
 #footer-wrapper {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    height: 15%;
+    padding: 5px;
 }
 #svg {
     height: 100%;
@@ -28,8 +33,6 @@ body {
 #logo {
     margin-top: 15%;
     color: white;
-    font-weight: 900;
-    font-size: 62px;
     text-align: center;
     svg {
         height: 100%;
@@ -39,10 +42,4 @@ body {
 #tagline {
     padding: 20px;
     text-align: center;
-}
-#copyright {
-    padding: 5px 5px 0px 5px;
-}
-#address {
-    padding: 0px 5px 5px 5px;
 }
