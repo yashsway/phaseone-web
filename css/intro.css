@@ -67,7 +67,7 @@ textarea {
 .tertiary-text-color {
   color: #6E9AB2; }
 
-.primary-font, .section-super-header, .section-header, .primary-title, #tagline, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text {
+.primary-font, .section-super-header, .section-header, .primary-title, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text {
   font-family: "Brandon Text", sans-serif; }
 
 .secondary-font, .body-text {
@@ -81,7 +81,7 @@ body {
   overflow-x: hidden;
   font-size: 16px; }
 
-.font-fix, .section-super-header, .section-header, .primary-title, #tagline, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text, .body-text {
+.font-fix, .section-super-header, .section-header, .primary-title, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text, .body-text {
   font-kerning: auto; }
 
 .section-super-header {
@@ -96,10 +96,10 @@ body {
   font-weight: 800;
   line-height: 18px; }
 
-.primary-title, #tagline {
+.primary-title {
   color: #425760;
   font-size: 1.999em;
-  line-height: 18px; }
+  line-height: 45px; }
 
 .secondary-title {
   color: #425760;
@@ -122,15 +122,16 @@ body {
   line-height: 2px; }
 
 .description-text {
-  color: #919DA2;
+  color: #202426;
   font-size: 0.707em;
+  font-weight: 300;
   letter-spacing: 0.4px;
   line-height: 25px; }
 
 .body-text {
   /* Motivation can take : */
   font-size: 1em;
-  color: #171519;
+  color: #202426;
   letter-spacing: 0px;
   line-height: 22px; }
 
@@ -331,30 +332,37 @@ body {
   background: #fff;
   font-family: 'Brandon Text', sans-serif; }
 
+.landing-wrapper {
+  height: 100%;
+  width: 100%; }
+
+#footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+
 #svg {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: -2; }
 
-.container {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 100%;
-  height: 100%; }
-
 #logo {
-  align-self: center;
+  margin-top: 15%;
   color: white;
   font-weight: 900;
   font-size: 62px;
   text-align: center; }
+  #logo svg {
+    height: 100%;
+    width: 80%; }
 
 #tagline {
-  align-self: center;
-  padding: 20px; }
+  padding: 20px;
+  text-align: center; }
+
+#copyright {
+  padding: 5px 5px 0px 5px; }
+
+#address {
+  padding: 0px 5px 5px 5px; }

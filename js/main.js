@@ -1,11 +1,19 @@
+//Flowtype
+$('body').flowtype({
+ minimum   : 500,
+ maximum   : 1200,
+ minFont   : 8,
+ maxFont   : 20,
+ fontRatio : 50
+});
 //Usually caps around twice the interval
 var allCircles = [];
 var circleCount = 0;
-var colorArray = ['#202426', '#BCD0DB', '#FFED93','#919DA2'];
+var colorArray = ['#202426', '#BCD0DB', '#FFED93','#919DA2','#7AC397','#E56B62','#583C5A'];
 var colorCount = 0;
 colorArray = shuffle(colorArray);
-
 var s = Snap("#svg");
+var window_focus = true;
 
 //Growth Tween
 const grow = motion.tween({
@@ -101,22 +109,29 @@ function sequentialRandomColor(interval=7) {
 }
 
 function generateRandomCircles(count = 3) {
-    for (let i = 0; i < count; i++) {
-        var screenHeight = $(window).height();
-        var screenWidth = $(window).width();
-        let x = Math.floor(Math.random() * ((screenWidth - 0) + 1) + (1));
-        let y = Math.floor((Math.random() * screenHeight) + 1) + 1;
-        let unique = generateID();
-        storeCircle(
-            (s.circle(x, y, 1)).attr({
-                fill: sequentialRandomColor(6),
-                id: unique
-            })
-        );
-        animateCircle(unique);
+    if(window_focus==true){
+        for (let i = 0; i < count; i++) {
+            var screenHeight = $(window).height();
+            var screenWidth = $(window).width();
+            let x = Math.floor(Math.random() * ((screenWidth - 0) + 1) + (1));
+            let y = Math.floor((Math.random() * screenHeight) + 1) + 1;
+            let unique = generateID();
+            storeCircle(
+                (s.circle(x, y, 1)).attr({
+                    fill: sequentialRandomColor(6),
+                    id: unique
+                })
+            );
+            animateCircle(unique);
+        }
     }
 }
 var begin = setInterval(() => generateRandomCircles(1), 3000);
+$(window).focus(function() {
+    window_focus = true;
+}).blur(function() {
+    window_focus = false;
+});
 //window.onblur(window.clearInterval(begin));
 
 //Old animation need to reconfigure

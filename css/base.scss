@@ -137,7 +137,7 @@ body {
     @extend .primary-font;
     color: $secondary-color;
     font-size: 1.999em;
-    line-height: 18px;
+    line-height: 45px;
 }
 .secondary-title {
     @extend .font-fix;
@@ -170,8 +170,9 @@ body {
 .description-text {
     @extend .primary-font;
     @extend .font-fix;
-    color: $secondary-alt-2-color;
+    color: $secondary-alt-1-color;
     font-size: 0.707em;
+    font-weight: 300;
     letter-spacing: 0.4px;
     line-height: 25px;
 }
@@ -180,7 +181,7 @@ body {
     @extend .secondary-font;
     @extend .font-fix;
     font-size: 1em;
-    color: #171519;
+    color: $secondary-alt-1-color;
     letter-spacing: 0px;
     line-height: 22px;
 }

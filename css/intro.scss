@@ -10,32 +10,39 @@ body {
     background: #fff;
     font-family: 'Brandon Text', sans-serif;
 }
+.landing-wrapper {
+    height: 100%;
+    width: 100%;
+}
+#footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 #svg {
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: -2;
 }
-.container {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
 #logo {
-    align-self: center;
+    margin-top: 15%;
     color: white;
     font-weight: 900;
     font-size: 62px;
     text-align: center;
+    svg {
+        height: 100%;
+        width: 80%;
+    }
 }
 #tagline {
-    align-self: center;
-    @extend .primary-title;
     padding: 20px;
+    text-align: center;
+}
+#copyright {
+    padding: 5px 5px 0px 5px;
+}
+#address {
+    padding: 0px 5px 5px 5px;
 }

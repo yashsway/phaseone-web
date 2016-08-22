@@ -99,7 +99,7 @@ body {
 .primary-title {
   color: #425760;
   font-size: 1.999em;
-  line-height: 18px; }
+  line-height: 45px; }
 
 .secondary-title {
   color: #425760;
@@ -122,15 +122,16 @@ body {
   line-height: 2px; }
 
 .description-text {
-  color: #919DA2;
+  color: #202426;
   font-size: 0.707em;
+  font-weight: 300;
   letter-spacing: 0.4px;
   line-height: 25px; }
 
 .body-text {
   /* Motivation can take : */
   font-size: 1em;
-  color: #171519;
+  color: #202426;
   letter-spacing: 0px;
   line-height: 22px; }
 
