@@ -1,0 +1,17 @@
+{
+  "name": "phaseone",
+  "version": "0.0.2",
+  "description": "Official website of the student run tech organization housed at McMaster University",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "author": "Yash",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
+  }
+}
