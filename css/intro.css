@@ -140,6 +140,13 @@ Default button styles
 ---------------------*/
 /* Link clear defaults
 -------------------*/
+a {
+  text-decoration: none;
+  color: black; }
+
+a:focus, a:hover {
+  color: #6E9AB2; }
+
 a:active {
   outline: 0; }
 

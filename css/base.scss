@@ -191,6 +191,13 @@ Default button styles
 
 /* Link clear defaults
 -------------------*/
+a {
+    text-decoration: none;
+    color: black;
+}
+a:focus, a:hover {
+    color: $tertiary-color;
+}
 a:active {
     outline: 0;
 }
