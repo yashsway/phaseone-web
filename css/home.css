@@ -328,58 +328,12 @@ table {
   h2,
   h3 {
     page-break-after: avoid; } }
-* {
-  box-sizing: border-box; }
+#contact-bar {
+  height: 50px;
+  background-color: #FFED93; }
+  #contact-bar div {
+    text-align: center;
+    height: auto; }
 
 .test {
-  background-color: indianred; }
-
-html, body {
-  min-height: 100%;
-  overflow: hidden; }
-
-body {
-  background: #fff;
-  font-family: 'Brandon Text', sans-serif; }
-
-.landing-wrapper {
-  height: 100%;
-  width: 100%; }
-
-#logo-wrapper {
-  height: 85%; }
-
-#footer-wrapper {
-  height: 15%;
-  padding: 0px 5px 10px 5px; }
-
-#svg {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -2; }
-
-#logo {
-  margin-top: 15%;
-  color: white;
-  text-align: center; }
-  #logo svg {
-    height: 100%;
-    width: 80%; }
-
-#tagline {
-  padding: 20px;
-  text-align: center; }
-
-.button {
-  background: #FFCF00;
-  box-shadow: 0px 1px 1px 0px #DDB300;
-  border-radius: 3px;
-  min-height: 30px;
-  vertical-align: middle; }
-
-.button:hover {
-  background: #FFD400; }
-
-#start {
-  margin: 10px; }
+  background-color: black; }

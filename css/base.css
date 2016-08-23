@@ -112,9 +112,9 @@ body {
   line-height: 15px; }
 
 .tagline-text {
-  color: #919DA2;
+  color: #202426;
   font-size: 1.125em;
-  line-height: 5px; }
+  line-height: 24px; }
 
 .note-text {
   color: #DDB300;
@@ -142,7 +142,7 @@ Default button styles
 -------------------*/
 a {
   text-decoration: none;
-  color: black; }
+  color: #202426; }
 
 a:focus, a:hover {
   color: #6E9AB2; }

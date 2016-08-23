@@ -9,7 +9,7 @@ $('body').flowtype({
 //Usually caps around twice the interval
 var allCircles = [];
 var circleCount = 0;
-var colorArray = ['#202426', '#BCD0DB', '#FFED93','#dbdee0','#7AC397','#E56B62'];
+var colorArray = ['#202426', '#BCD0DB', '#FFED93','#dbdee0'];
 var colorCount = 0;
 colorArray = shuffle(colorArray);
 var s = Snap("#svg");

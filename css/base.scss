@@ -156,9 +156,9 @@ body {
 .tagline-text {
     @extend .font-fix;
     @extend .primary-font;
-    color: $secondary-alt-2-color;
+    color: $secondary-alt-1-color;
     font-size: 1.125em;
-    line-height: 5px;
+    line-height: 24px;
 }
 .note-text {
     @extend .font-fix;
@@ -193,7 +193,7 @@ Default button styles
 -------------------*/
 a {
     text-decoration: none;
-    color: black;
+    color: $secondary-alt-1-color;
 }
 a:focus, a:hover {
     color: $tertiary-color;
