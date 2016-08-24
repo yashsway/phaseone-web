@@ -40,29 +40,3 @@ body {
     padding: 20px;
     text-align: center;
 }
-.button {
-    background: #FFCF00;
-    box-shadow: 0px 1px 1px 0px $primary-alt-1-color;
-    border-radius: 3px;
-    min-height: 30px;
-    vertical-align: middle;
-}
-.button:hover {
-    background: $primary-color;
-}
-#start {
-    margin: 10px;
-}
-#construction-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: $secondary-alt-3-color;
-    min-height: 50px;
-    font-weight: 300;
-    font-style: italic;
-    padding: 10px;
-    box-shadow: 0px 1px 1px 0px rgba(48,68,76,0.75);
-}

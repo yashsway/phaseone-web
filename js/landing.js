@@ -9,8 +9,10 @@ $('body').flowtype({
 //Usually caps around twice the interval
 var allCircles = [];
 var circleCount = 0;
-var colorArray = ['#202426', '#BCD0DB', '#FFED93','#dbdee0'];
+var colorArray = ['#000000','#F4F4F4'];
 var colorCount = 0;
+var generatedColors = randomColor({luminosity: 'light',count: 10});
+var colorArray = colorArray.concat(generatedColors);
 colorArray = shuffle(colorArray);
 var s = Snap("#svg");
 var window_focus = true;
@@ -103,13 +105,13 @@ function sequentialRandomColor(interval=7) {
         if (colorCount < interval*3) {
             colorCount += 1;
         } else {
+            colorArray = shuffle(colorArray);
             colorCount = 0;
         }
     }
 }
 
 function generateRandomCircles(count=3) {
-    console.log(allCircles.length);
     if(window_focus==true){
         for (let i = 0; i < count; i++) {
             var screenHeight = $(window).height();

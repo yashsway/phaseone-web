@@ -10,7 +10,7 @@ Custom Font Sets
 /* Basic Boilerplate */
 html {
   max-width: 100% !important;
-  color: #222;
+  color: #0B1114;
   line-height: 1.4;
   overflow-x: hidden !important; }
 
@@ -59,13 +59,13 @@ textarea {
 /* Default typography
 --------------------- */
 .primary-text-color {
-  color: #FFD400; }
+  color: #0B1114; }
 
 .secondary-text-color {
-  color: #FFFDF5; }
+  color: #F2F3F4; }
 
 .tertiary-text-color {
-  color: #6E9AB2; }
+  color: #373F51; }
 
 .primary-font, .section-super-header, .section-header, .primary-title, .secondary-title, .sub-title, .tagline-text, .note-text, .description-text {
   font-family: "Brandon Text", sans-serif; }
@@ -85,44 +85,44 @@ body {
   font-kerning: auto; }
 
 .section-super-header {
-  color: #FFD400;
+  color: #000000;
   font-size: 4.236em;
   line-height: 18px;
   font-weight: bold; }
 
 .section-header {
-  color: #425760;
+  color: #0B1114;
   font-size: 2.618em;
   font-weight: 800;
   line-height: 18px; }
 
 .primary-title {
-  color: #425760;
+  color: #0B1114;
   font-size: 1.999em;
   line-height: 45px; }
 
 .secondary-title {
-  color: #425760;
+  color: #373F51;
   font-size: 1.618em;
   line-height: 35px; }
 
 .sub-title {
-  color: #6E9AB2;
+  color: #8D99AE;
   font-size: 1.414em;
   line-height: 15px; }
 
 .tagline-text {
-  color: #202426;
+  color: #373F51;
   font-size: 1.125em;
   line-height: 24px; }
 
 .note-text {
-  color: #DDB300;
+  color: #0B1114;
   font-size: 0.875em;
   line-height: 2px; }
 
 .description-text {
-  color: #202426;
+  color: #373F51;
   font-size: 0.707em;
   font-weight: 300;
   letter-spacing: 0.4px;
@@ -131,27 +131,47 @@ body {
 .body-text {
   /* Motivation can take : */
   font-size: 1em;
-  color: #202426;
+  color: #000000;
   letter-spacing: 0px;
   line-height: 22px; }
 
-/*
-Default button styles
----------------------*/
 /* Link clear defaults
 -------------------*/
 a {
   text-decoration: none;
-  color: #202426; }
+  color: #0B1114; }
 
 a:focus, a:hover {
-  color: #6E9AB2; }
+  color: #F2F3F4; }
 
 a:active {
   outline: 0; }
 
 a:visited {
   outline: 0; }
+
+/*
+Default button styles
+---------------------*/
+.button {
+  margin: 0px;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  min-height: 30px;
+  vertical-align: middle;
+  color: #000000;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.button:hover {
+  background: #000000;
+  color: white; }
+
+.button-link-color-inherit a {
+  color: inherit; }
+  .button-link-color-inherit a:hover, .button-link-color-inherit a:focus {
+    color: inherit; }
 
 /* Shared elements
 ------------------*/
@@ -172,12 +192,12 @@ footer {
   width: 90%;
   top: 20px;
   left: 5%;
-  background-color: #FFFDF5;
+  background-color: #F2F3F4;
   box-shadow: 0px 3px 5px 0px rgba(70, 63, 76, 0.3);
   padding: 20px; }
 
 .card {
-  color: #FFFDF5;
+  color: #F2F3F4;
   background: #463F4C;
   box-shadow: 0px 3px 0px 0px #312C35, 0px 3px 0px 0px rgba(70, 63, 76, 0.5); }
 
@@ -214,6 +234,24 @@ table {
     vertical-align: middle; }
   table td, table th {
     padding: 20px; }
+
+.construction-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  min-height: 50px;
+  font-weight: 300;
+  font-style: italic;
+  padding: 10px;
+  box-shadow: 0px 1px 0px 2px #000000; }
+
+.icon {
+  height: 50px;
+  width: 50px; }
 
 /* Utilities
 --------------*/
@@ -328,6 +366,13 @@ table {
   h2,
   h3 {
     page-break-after: avoid; } }
+/* Testers */
+.test1 {
+  background-color: lightgrey; }
+
+.test2 {
+  background-color: indianred; }
+
 * {
   box-sizing: border-box; }
 
@@ -367,29 +412,3 @@ body {
 #tagline {
   padding: 20px;
   text-align: center; }
-
-.button {
-  background: #FFCF00;
-  box-shadow: 0px 1px 1px 0px #DDB300;
-  border-radius: 3px;
-  min-height: 30px;
-  vertical-align: middle; }
-
-.button:hover {
-  background: #FFD400; }
-
-#start {
-  margin: 10px; }
-
-#construction-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #dbdee0;
-  min-height: 50px;
-  font-weight: 300;
-  font-style: italic;
-  padding: 10px;
-  box-shadow: 0px 1px 1px 0px rgba(48, 68, 76, 0.75); }

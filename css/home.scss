@@ -1,12 +1,18 @@
 @import "base.scss";
 #contact-bar {
-	height: 50px;
-	background-color: #FFED93;
-	div {
-		text-align: center;
-		height: auto;
-	}
+    min-height: 50px;
+    background-color: $secondary-alt-2-color;
+    div {
+        text-align: center;
+        height: auto;
+        padding: 5px;
+    }
 }
-.test {
-	background-color: black;
+#header-wrapper {
+    div {
+        padding: 5px;
+    }
+    #talkToUs {
+        margin-right: 5px;
+    }
 }
