@@ -4,3 +4,10 @@ $(window).focus(function() {
 }).blur(function() {
     window_focus = false;
 });
+$('body').flowtype({
+ minimum   : 500,
+ maximum   : 1200,
+ minFont   : 8,
+ maxFont   : 22,
+ fontRatio : 5
+});

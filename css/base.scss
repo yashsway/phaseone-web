@@ -86,13 +86,13 @@ textarea {
 /* Default typography
 --------------------- */
 .primary-text-color {
-    color: $primary-color;
+    color: $primary-color !important;
 }
 .secondary-text-color {
-    color: $primary-alt-2-color;
+    color: $secondary-color !important;
 }
 .tertiary-text-color {
-    color: $tertiary-color;
+    color: $tertiary-color !important;
 }
 .primary-font {
     font-family: "Brandon Text", sans-serif;
@@ -119,16 +119,17 @@ body {
     @extend .primary-font;
     color: $primary-alt-1-color;
     font-size: 4.236em;
-    line-height: 18px;
+    line-height: 93px;
     font-weight: bold;
 }
 .section-header {
     @extend .font-fix;
     @extend .primary-font;
     color: $primary-color;
+    text-align: center;
     font-size: 2.618em;
     font-weight: 800;
-    line-height: 18px;
+    line-height: 56px;
 }
 .primary-title {
     @extend .font-fix;
@@ -187,10 +188,10 @@ body {
 -------------------*/
 a {
     text-decoration: none;
-    color: $primary-color;
+    color: $tertiary-alt-1-color;
 }
 a:focus, a:hover {
-    color: $primary-alt-2-color;
+    color: $primary-color;
 }
 a:active {
     outline: 0;
@@ -237,30 +238,12 @@ footer {
     left: 0;
     width: 100%;
 }
-.slate {
-    position: relative;
-    display: block;
-    height: auto;
-    width: 90%;
-    top: 20px;
-    left: 5%;
-    background-color: $primary-alt-2-color;
-    box-shadow: 0px 3px 5px 0px rgba(70,63,76,0.30);
-    padding: 20px;
-}
-.card {
-    color: $primary-alt-2-color;
-    background: #463F4C;
-    box-shadow: 0px 3px 0px 0px #312C35, 0px 3px 0px 0px rgba(70,63,76,0.50);
-}
-.profile {
-    img {
-        margin-left: 22%;
-        height: 120px;
-    }
+img {
+    border: 1px solid $tertiary-alt-2-color;
+    border-radius: 3px;
 }
 .icon {
-    height: 45px;
+    height: 50px;
     width: auto !important;
     pointer-events: none;
 }
@@ -308,9 +291,12 @@ table {
     padding: 10px;
     box-shadow: 0px 1px 0px 2px $primary-alt-1-color;
 }
-.icon {
-    height: 50px;
-    width: 50px;
+.tiles {
+    text-align: center;
+    padding: 20px;
+    * {
+        margin: 0px;
+    }
 }
 /* Utilities
 --------------*/

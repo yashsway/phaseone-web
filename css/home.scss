@@ -8,11 +8,72 @@
         padding: 5px;
     }
 }
-#header-wrapper {
+section {
+    padding: 20px;
+}
+#navigation-main {
+    a {
+        color: inherit;
+    }
+    a:focus, a:hover {
+        color: $tertiary-alt-1-color;
+    }
+}
+
+#section-header {
     div {
         padding: 5px;
     }
     #talkToUs {
         margin-right: 5px;
+    }
+}
+#section-intro {
+    padding: 30px 10px 10px 10px;
+    #intro-blurb {
+        text-align: center;
+    }
+    img {
+        max-height: 497px;
+        width: auto;
+    }
+}
+#section-who {
+    .subtitle {
+        text-align: center;
+    }
+}
+#section-what {
+    .subtitle {
+        text-align: center;
+    }
+    img {
+        border: none;
+        height: 100px;
+        width: auto;
+    }
+    .tiles p {
+        padding-top: 20px;
+    }
+}
+#section-footer {
+    color: $secondary-color;
+    height: 250px;
+    background-color: $tertiary-color;
+    padding-bottom: 0px;
+    #privacy {
+        padding: 30px 0px 0px 0px;
+    }
+    #copyright {
+        padding: 30px 0px 0px 0px;
+    }
+    #logo-footer {
+        padding: 30px 20px 20px 0px;
+        img {
+            height: 40px;
+            width: auto;
+            border: none;
+            border-radius: none;
+        }
     }
 }
