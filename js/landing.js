@@ -48,25 +48,6 @@ function clean(svgID) {
 }
 //Binds animation to SVG circle of a certain ID
 function animateCircle(obj,svgID) {
-    //Set growth and destruction animations
-    // TweenLite.to($('#' + obj.attr('id')),10,{
-    //   scale: 300,
-    //   ease:Quad.easeInOut,
-    //   onComplete: function(tween,obj){
-    //     TweenLite.to(tween.target,5,{
-    //       opacity: 0,
-    //       ease:Quad.easeInOut,
-    //       transformOrigin: '50% 50%',
-    //       onComplete: function(){
-    //         //Remove SVG circle from DOM
-    //         $('#' + obj.attr('id'))[0].remove();
-    //         //Remove SVG circle from storage
-    //         allCircles.splice(allCircles.indexOf(obj),1);
-    //       }
-    //     });
-    //   },
-    //   onCompleteParams:["{self}",obj]
-    // });
     obj.animate({
         //scale
         r: 800
@@ -74,7 +55,7 @@ function animateCircle(obj,svgID) {
         //Fade to 0 opacity after scale is complete
         this.animate({
             opacity: 0
-        }, 10000, mina.easeInOut, function () {
+        }, 15000, mina.easeInOut, function () {
             //Remove SVG circle from DOM
             $('#' + this.attr('id'))[0].remove();
             //Remove SVG circle from storage

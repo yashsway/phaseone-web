@@ -1,4 +1,7 @@
-* {
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*
@@ -140,10 +143,10 @@ body {
 -------------------*/
 a {
   text-decoration: none;
-  color: #8D99AE; }
+  outline: none; }
 
 a:focus, a:hover {
-  color: #0B1114; }
+  outline: none; }
 
 a:active {
   outline: 0; }

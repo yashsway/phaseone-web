@@ -31,8 +31,8 @@
         <div class="small-12 medium-3 columns"></div>
         <div class="small-12 medium-6 columns">
             <ul class="menu align-center" id="navigation-main">
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Team</a></li>
+                <li class="menu-item menu__item--current"><a href="#" class="menu__link">Work</a></li>
+                <li class="menu-item"><a href="#" class="menu__link">Team</a></li>
                 <li>
                     <a href="home.html">
                         <svg class="icon" width="75px" height="75px" viewbox="-1 -1 1024 1023" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -51,8 +51,8 @@
                         </svg>
                     </a>
                 </li>
-                <li><a href="#">Social</a></li>
-                <li><a href="#">Affiliate</a></li>
+                <li class="menu-item"><a href="#" class="menu__link">Social</a></li>
+                <li class="menu-item"><a href="#" class="menu__link">Affiliate</a></li>
             </ul>
         </div>
         <div class="test 2small-12 medium-3 columns">
@@ -120,17 +120,20 @@
         </div>
     </section>
     <section class="row small-12 align-center align-middle" id="section-highlight">
-        <h1 class="section-header">Highlight Reel</h1>
+        <div class="small-12 columns"><h1 class="section-header">Highlight Reel</h1></div>
+        <div class="small-12 columns">
+            <iframe class="float-center" width="560" height="315" src="https://www.youtube.com/embed/CZL2KTM-_rE" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
-    <section class="row expanded align-bottom" id="section-footer">
+    <section class="row expanded align-bottom align-justify" id="section-footer">
         <div class="small-12 medium-4 columns" id="privacy">
-            <p class="description-text secondary-text-color">Privacy Policy</p>
+            <p class="description-text secondary-text-color center-text-small">Privacy Policy</p>
         </div>
         <div class="small-12 medium-4 columns center-text" id="copyright">
             <p class="description-text secondary-text-color">Independent organization founded at McMaster University, Copyright 2015</p>
         </div>
         <div class="small-12 medium-4 columns" id="logo-footer">
-            <img class="float-right" src="assets/branding/logo/main-inverted.svg" />
+            <img src="assets/branding/logo/main-monochrome-secondary.png" />
         </div>
     </section>
     <!--    jQuery-->
@@ -143,7 +146,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
     <!--    FlowType-->
     <script src="bower_components/Flowtype.js/flowtype.js" type="application/javascript"></script>
-    <script src="build/home.js"></script>
+    <!-- Galleria -->
+    <script src="js/vendor/galleria/galleria-1.4.2.min.js"></script>
+    <script src="js/home.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function (b, o, i, l, e, r) {

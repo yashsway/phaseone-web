@@ -12,11 +12,41 @@ section {
     padding: 20px;
 }
 #navigation-main {
-    a {
-        color: inherit;
+    .menu__link {
+        // position: relative;
+        display: inline-block;
+        color: $primary-color;
+        &:hover {
+            color: $tertiary-color;
+            -webkit-transition: color 0.2s;
+            transition: color 0.2s;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: relative;
+            margin: 4px 0px 0px 0px;
+            width: 0%;
+            border-bottom: 3px solid $tertiary-alt-1-color;
+            transition: all 0.4s ease;
+            visibility: hidden;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
     }
-    a:focus, a:hover {
+    .menu__item--current .menu__link {
         color: $tertiary-alt-1-color;
+        -webkit-transition: color 0.5s;
+        transition: color 0.5s;
+        &::after {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+    .menu__item--current {
+        color: $tertiary-alt-1-color;
+        -webkit-transition: color 0.1s;
+        transition: color 0.1s;
     }
 }
 
@@ -70,12 +100,30 @@ section {
         padding: 30px 0px 0px 0px;
     }
     #logo-footer {
-        padding: 30px 20px 20px 0px;
+        padding: 30px 10px 20px 20px;
         img {
-            height: 40px;
-            width: auto;
+            height: auto;
+            width: 300px;
             border: none;
             border-radius: none;
         }
+        @media screen and (max-width: 39.9375em) {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media screen and (min-width: 40em) {
+            img {
+                float: right;
+            }
+        }
+
+    }
+}
+.center-text-small {
+    @media screen and (max-width: 39.9375em) {
+        text-align: center;
     }
 }

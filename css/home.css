@@ -1,4 +1,7 @@
-* {
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*
@@ -140,10 +143,10 @@ body {
 -------------------*/
 a {
   text-decoration: none;
-  color: #8D99AE; }
+  outline: none; }
 
 a:focus, a:hover {
-  color: #0B1114; }
+  outline: none; }
 
 a:active {
   outline: 0; }
@@ -371,10 +374,35 @@ table {
 section {
   padding: 20px; }
 
-#navigation-main a {
-  color: inherit; }
-#navigation-main a:focus, #navigation-main a:hover {
-  color: #8D99AE; }
+#navigation-main .menu__link {
+  display: inline-block;
+  color: #0B1114; }
+  #navigation-main .menu__link:hover {
+    color: #373F51;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+  #navigation-main .menu__link::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin: 4px 0px 0px 0px;
+    width: 0%;
+    border-bottom: 3px solid #8D99AE;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+#navigation-main .menu__item--current .menu__link {
+  color: #8D99AE;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+  #navigation-main .menu__item--current .menu__link::after {
+    visibility: visible;
+    width: 100%; }
+#navigation-main .menu__item--current {
+  color: #8D99AE;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s; }
 
 #section-header div {
   padding: 5px; }
@@ -413,9 +441,21 @@ section {
   #section-footer #copyright {
     padding: 30px 0px 0px 0px; }
   #section-footer #logo-footer {
-    padding: 30px 20px 20px 0px; }
+    padding: 30px 10px 20px 20px; }
     #section-footer #logo-footer img {
-      height: 40px;
-      width: auto;
+      height: auto;
+      width: 300px;
       border: none;
       border-radius: none; }
+    @media screen and (max-width: 39.9375em) {
+      #section-footer #logo-footer img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media screen and (min-width: 40em) {
+      #section-footer #logo-footer img {
+        float: right; } }
+
+@media screen and (max-width: 39.9375em) {
+  .center-text-small {
+    text-align: center; } }

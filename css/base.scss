@@ -10,7 +10,10 @@ $tertiary-color: #373F51;
 $tertiary-alt-1-color: #8D99AE;
 $tertiary-alt-2-color: #D8DBE2;
 //Box-sizing default
-* {
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 /*
@@ -188,10 +191,10 @@ body {
 -------------------*/
 a {
     text-decoration: none;
-    color: $tertiary-alt-1-color;
+    outline: none;
 }
 a:focus, a:hover {
-    color: $primary-color;
+    outline: none;
 }
 a:active {
     outline: 0;

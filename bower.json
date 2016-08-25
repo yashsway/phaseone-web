@@ -31,5 +31,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery.fitvids": "FitVids#^1.1.0"
+  }
 }
