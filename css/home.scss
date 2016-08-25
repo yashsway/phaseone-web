@@ -13,6 +13,10 @@ section {
     padding: 20px;
 }
 
+.section-1 {
+    max-height: 700px;
+}
+
 #navigation-main {
     .menu__link {
         min-width: 80px;
@@ -34,6 +38,8 @@ section {
             transition: all 0.3s ease;
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
+            visibility: hidden;
+            @extend .testanim;
         }
     }
     .menu__item--current .menu__link {
@@ -43,6 +49,7 @@ section {
         &:after {
             border-bottom: 4px solid $tertiary-alt-1-color;
             width: 100%;
+            visibility: visible;
         }
     }
     .menu__item--current {
@@ -136,7 +143,7 @@ section {
     .section-1 {
         height: 100vh;
         width: 100%;
-        background: linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.63) 31%, #FFFFFF 95%), url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/91WZ32J28K.jpg') center center no-repeat;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.63) 31%, #FFFFFF 95%), url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/91WZ32J28K.jpg') center center no-repeat;
         background-size: cover;
         div {
             padding-bottom: 100px;
@@ -148,7 +155,7 @@ section {
     .section-1 {
         height: 100vh;
         width: 100%;
-        background: linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.63) 31%, #FFFFFF 95%), url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/Y2P39NGLLO.jpg') center center no-repeat;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.63) 31%, #FFFFFF 95%), url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/Y2P39NGLLO.jpg') center center no-repeat;
         background-size: cover;
         div {
             padding-bottom: 100px;
@@ -161,7 +168,7 @@ section {
     .section-1 {
         height: 100vh;
         width: 100%;
-        background: linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.63) 31%, #FFFFFF 95%), url('https://hd.unsplash.com/photo-1470753937643-efeb931202a9') center center no-repeat;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.63) 31%, #FFFFFF 95%), url('https://hd.unsplash.com/photo-1470753937643-efeb931202a9') center center no-repeat;
         background-size: cover;
         div {
             padding-bottom: 100px;
@@ -173,7 +180,7 @@ section {
     .section-1 {
         height: 100vh;
         width: 100%;
-        background: linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.63) 31%, #FFFFFF 95%), url('../../assets/images/team.jpeg') center center no-repeat;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.63) 31%, #FFFFFF 95%), url('../../assets/images/team.jpeg') center center no-repeat;
         background-size: cover;
         div {
             padding-bottom: 100px;
@@ -201,9 +208,30 @@ section {
     animation-name: fadeIn;
 }
 
+.m-scene .scene-main--fadeinup {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.m-scene .scene-main--fadeinright {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
 .m-scene.is-exiting .scene-main {
     -webkit-animation-direction: alternate-reverse;
     animation-direction: alternate-reverse;
+}
+
+.testanim {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: width;
+    animation-name: width;
 }
 
 @-webkit-keyframes fadeIn {
@@ -223,7 +251,6 @@ section {
         opacity: 1;
     }
 }
-
 @-webkit-keyframes width {
     0% {
         width: 0%;
@@ -232,12 +259,33 @@ section {
         width: 100%;
     }
 }
-
 @keyframes width {
     0% {
         width: 0%;
     }
     100% {
         width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }

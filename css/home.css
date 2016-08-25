@@ -374,6 +374,9 @@ table {
 section {
   padding: 20px; }
 
+.section-1 {
+  max-height: 700px; }
+
 #navigation-main .menu__link {
   min-width: 80px;
   display: block;
@@ -392,14 +395,16 @@ section {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -webkit-transform: scaleX(1);
-    transform: scaleX(1); }
+    transform: scaleX(1);
+    visibility: hidden; }
 #navigation-main .menu__item--current .menu__link {
   color: #8D99AE;
   -webkit-transition: width 0.5s;
   transition: width 0.5s; }
   #navigation-main .menu__item--current .menu__link:after {
     border-bottom: 4px solid #8D99AE;
-    width: 100%; }
+    width: 100%;
+    visibility: visible; }
 #navigation-main .menu__item--current {
   color: #8D99AE;
   -webkit-transition: color 0.3s;
@@ -506,9 +511,27 @@ section {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
 
+.m-scene .scene-main--fadeinup {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+.m-scene .scene-main--fadeinright {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+
 .m-scene.is-exiting .scene-main {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse; }
+
+.testanim, #navigation-main .menu__link:after {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: width;
+  animation-name: width; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -530,3 +553,17 @@ section {
     width: 0%; }
   100% {
     width: 100%; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
