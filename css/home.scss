@@ -13,23 +13,23 @@ section {
 }
 #navigation-main {
     .menu__link {
-        // position: relative;
-        display: inline-block;
+        min-width: 80px;
+        display: block;
         color: $primary-color;
+        text-align: center;
         &:hover {
             color: $tertiary-color;
-            -webkit-transition: color 0.2s;
-            transition: color 0.2s;
+            -webkit-transition: color 0.4s;
+            transition: color 0.4s;
         }
-        &::after {
+        &:after {
             content: '';
             display: block;
-            position: relative;
-            margin: 4px 0px 0px 0px;
+            margin: 4px auto;
             width: 0%;
-            border-bottom: 3px solid $tertiary-alt-1-color;
+            border-bottom: 4px solid $primary-color;
+            webkit-transition: all 0.4s ease;
             transition: all 0.4s ease;
-            visibility: hidden;
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
         }
@@ -38,8 +38,8 @@ section {
         color: $tertiary-alt-1-color;
         -webkit-transition: color 0.5s;
         transition: color 0.5s;
-        &::after {
-            visibility: visible;
+        &:after {
+            border-bottom: 4px solid $tertiary-alt-1-color;
             width: 100%;
         }
     }
@@ -126,4 +126,66 @@ section {
     @media screen and (max-width: 39.9375em) {
         text-align: center;
     }
+}
+.m-scene .scene-main {
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.m-scene .scene-main--fadein {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+.m-scene.is-exiting .scene-main {
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
+}
+.m-scene .scene-nav {
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: width;
+          animation-name: width;
+}
+.m-scene.is-exiting .scene-nav {
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes width {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 50vw;
+  }
+}
+@keyframes width {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 50vw;
+  }
 }

@@ -34,5 +34,8 @@
   ],
   "dependencies": {
     "jquery.fitvids": "FitVids#^1.1.0"
+  },
+  "devDependencies": {
+    "smoothstate": "^0.7.2"
   }
 }
