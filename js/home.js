@@ -12,7 +12,7 @@ $(window).focus(function() {
  fontRatio : 40
 });*/
 //Toggle current for clicked menu links
-/*$(function (){
+$(function (){
 	[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
 		var menuItems = menu.querySelectorAll('.menu__link'),
 		setCurrent = function(ev) {
@@ -34,8 +34,11 @@ $(window).focus(function() {
 						el.addEventListener('click', setCurrent);
 					});
 				});
-});*/
-$(function(){
+});
+$("#work").on('click',function(){
+	$(".page").load("work.html");
+});
+/*$(function(){
 	'use strict';
 	var $page = $('#main'),
 	options = {
@@ -62,4 +65,4 @@ $(function(){
     }
 },
 smoothState = $page.smoothState(options).data('smoothState');
-});
+});*/
