@@ -387,6 +387,9 @@ body {
   width: 100%;
   position: absolute;
   z-index: -2; }
+  #circleLoader circle {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%; }
 
 #logo {
   margin-top: 15%;

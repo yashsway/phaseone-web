@@ -9,7 +9,7 @@ $('body').flowtype({
 //Usually caps around twice the interval
 var allCircles = [];
 var circleCount = 0;
-var colorArray = ['#000000','#F4F4F4'];
+var colorArray = [];
 var colorCount = 0;
 var generatedColors = randomColor({luminosity: 'light',count: 10});
 var colorArray = colorArray.concat(generatedColors);
@@ -49,6 +49,24 @@ function clean(svgID) {
 //Binds animation to SVG circle of a certain ID
 function animateCircle(obj,svgID) {
     //Set growth and destruction animations
+    // TweenLite.to($('#' + obj.attr('id')),10,{
+    //   scale: 300,
+    //   ease:Quad.easeInOut,
+    //   onComplete: function(tween,obj){
+    //     TweenLite.to(tween.target,5,{
+    //       opacity: 0,
+    //       ease:Quad.easeInOut,
+    //       transformOrigin: '50% 50%',
+    //       onComplete: function(){
+    //         //Remove SVG circle from DOM
+    //         $('#' + obj.attr('id'))[0].remove();
+    //         //Remove SVG circle from storage
+    //         allCircles.splice(allCircles.indexOf(obj),1);
+    //       }
+    //     });
+    //   },
+    //   onCompleteParams:["{self}",obj]
+    // });
     obj.animate({
         //scale
         r: 800
@@ -56,7 +74,7 @@ function animateCircle(obj,svgID) {
         //Fade to 0 opacity after scale is complete
         this.animate({
             opacity: 0
-        }, 3000, mina.easeInOut, function () {
+        }, 10000, mina.easeInOut, function () {
             //Remove SVG circle from DOM
             $('#' + this.attr('id'))[0].remove();
             //Remove SVG circle from storage
@@ -93,16 +111,25 @@ function shuffle(array) {
 function sequentialRandomColor(interval=7) {
     switch (true) {
     case (colorCount <= interval):
-        increment();
+        colorCount += 1;
         return colorArray[0];
     case (colorCount <= interval*2):
-        increment();
+        colorCount += 1;
         return colorArray[1];
     case (colorCount <= interval*3):
-        increment();
+        colorCount += 1;
+        if(colorCount>interval*3){
+            var temp = colorArray[2];
+            //Shuffle colors when max (interval*3) is reached
+            colorArray = shuffle(colorArray);
+            //Restart
+            colorCount = 0;
+            //Return color stored from earlier
+            return temp;
+        }
         return colorArray[2];
     default:
-        increment();
+        return '#000';
         break;
     }
     function increment() {
