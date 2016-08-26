@@ -123,7 +123,7 @@ body {
 .note-text {
   color: #0B1114;
   font-size: 0.875em;
-  line-height: 2px; }
+  line-height: 18px; }
 
 .description-text {
   color: #373F51;
@@ -242,6 +242,16 @@ table {
   padding: 20px; }
   .tiles * {
     margin: 0px; }
+
+.card {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  padding: 30px 20px;
+  margin: 0 auto;
+  background: #DBDEE0;
+  box-shadow: 0px 1px 1px 0px rgba(48, 68, 76, 0.75);
+  border-radius: 3px; }
 
 /* Utilities
 --------------*/
@@ -463,6 +473,10 @@ section {
 .page-home #section-what .tiles p {
   padding-top: 20px; }
 
+.page-work .subtitle {
+  text-align: center; }
+.page-work .card h2 {
+  margin-bottom: 20px; }
 .page-work .section-1 {
   height: 100vh;
   width: 100%;
@@ -470,6 +484,11 @@ section {
   background-size: cover; }
   .page-work .section-1 div {
     padding-bottom: 100px; }
+.page-work .section-2 div:first-child {
+  margin-bottom: 30px; }
+.page-work .section-4 .button {
+  height: 150px;
+  width: 300px; }
 
 .page-team .section-1 {
   height: 100vh;
@@ -523,7 +542,7 @@ section {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse; }
 
-.testanim, #navigation-main .menu__link:after {
+.anim-width, #navigation-main .menu__link:after {
   -webkit-animation-duration: .3s;
   animation-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
