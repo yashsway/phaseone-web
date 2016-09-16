@@ -21,5 +21,5 @@ gulp.task("browserify", function(){
 });
 
 gulp.task("clean",function() {
-    del(['build/main.js']);
+    del(['build/*.js']);
 });

@@ -172,6 +172,11 @@ Default button styles
   background: #000000;
   color: white; }
 
+.button:active, .button:focus {
+  background: #000000;
+  color: white;
+  outline: none; }
+
 .button-link-color-inherit a {
   color: inherit; }
   .button-link-color-inherit a:hover, .button-link-color-inherit a:focus {
@@ -387,6 +392,22 @@ section {
 .section-1 {
   max-height: 700px; }
 
+#contact-bar {
+  display: none;
+  top: -50px;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease; }
+
+.close {
+  content: url("../assets/images/close.png");
+  height: 25px;
+  width: auto;
+  border: none;
+  cursor: pointer; }
+
+#navigation-main img {
+  height: 50px;
+  width: auto; }
 #navigation-main .menu__link {
   min-width: 80px;
   display: block;
@@ -437,7 +458,7 @@ section {
       height: auto;
       width: 300px;
       border: none;
-      border-radius: none; }
+      clip: rect(0px, 50px, 100px, 0px); }
     @media screen and (max-width: 39.9375em) {
       #section-footer #logo-footer img {
         display: block;

@@ -172,6 +172,11 @@ Default button styles
   background: #000000;
   color: white; }
 
+.button:active, .button:focus {
+  background: #000000;
+  color: white;
+  outline: none; }
+
 .button-link-color-inherit a {
   color: inherit; }
   .button-link-color-inherit a:hover, .button-link-color-inherit a:focus {

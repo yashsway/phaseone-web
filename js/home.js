@@ -4,6 +4,21 @@ $(window).focus(function () {
 }).blur(function () {
     window_focus = false;
 });
+function bind(){
+    $("#talkToUs").on('click',function(){
+        $("#contact-bar").css({'display':'flex','top':'0px'});
+    });
+    $("#contact-bar .close").on('click',function(){
+        $("#contact-bar").css({'display':'none','top':'-50px'});
+    });
+}
+bind();
+/*$("#talkToUs").on('click',function(){
+    console.log("cool");
+    $("#contact-bar").css('visibility','visible');
+    $("#contact-bar").css('top','0px');
+    $("#contact-bar").slideDown(3);
+});*/
 /*$('body').flowtype({
  minimum   : 0,
  maximum   : 1200,
@@ -61,6 +76,7 @@ $(function () {
                     $container.removeClass('is-exiting');
                     // Inject the new content
                     $container.html($newContent);
+                    bind();
                 }
             }
         },

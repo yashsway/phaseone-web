@@ -223,6 +223,11 @@ Default button styles
     background: $primary-alt-1-color;
     color: white;
 }
+.button:active, .button:focus {
+    background: $primary-alt-1-color;
+    color: white;
+    outline: none;
+}
 .button-link-color-inherit a{
     color: inherit;
     &:hover, &:focus {
