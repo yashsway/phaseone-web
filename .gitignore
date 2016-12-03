@@ -1,7 +1,7 @@
 # Packages & libraries
-node_modules/
-jspm_packages/
-bower_components/
+# node_modules/
+# jspm_packages/
+# bower_components/
 
 # caches
 .sass-cache
