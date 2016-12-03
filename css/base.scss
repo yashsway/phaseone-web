@@ -1,3 +1,6 @@
+//Dependencies
+@import "breakpoints";
+@import "bourbon/bourbon";
 //Colors
 $primary-color: #0B1114;
 $primary-alt-1-color: #000000;
@@ -13,8 +16,7 @@ $tertiary-alt-2-color: #D8DBE2;
 *,
 *:after,
 *:before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    @include prefixer(box-sizing, 'border-box', webkit moz spec);
 }
 /*
 Custom Font Sets
@@ -83,8 +85,9 @@ textarea {
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 /* Default typography
 --------------------- */
@@ -202,22 +205,34 @@ a:active {
 a:visited {
     outline: 0;
 }
+a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+    &:active,
+    &:focus {
+        color: inherit;
+    }
+}
 /*
 Default button styles
 ---------------------*/
 .button {
     margin: 0px;
-//    background: #FFCF00;
-//    box-shadow: 0px 1px 1px 0px $primary-alt-1-color;
-//    border-radius: 3px;
+    padding: 0px;
     background: $secondary-alt-3-color;
     border: 2px solid $primary-alt-1-color;
     min-height: 30px;
     vertical-align: middle;
     color: $primary-alt-1-color;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    @include transition(all 0.5s $ease-out-cubic);
+    a {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        padding: 10px 20px;
+    }
 }
 .button:hover {
     background: $primary-alt-1-color;
@@ -227,12 +242,6 @@ Default button styles
     background: $primary-alt-1-color;
     color: white;
     outline: none;
-}
-.button-link-color-inherit a{
-    color: inherit;
-    &:hover, &:focus {
-        color: inherit;
-    }
 }
 /* Shared elements
 ------------------*/
@@ -254,15 +263,6 @@ img {
     height: 50px;
     width: auto !important;
     pointer-events: none;
-}
-.icon-small {
-    height: 25px;
-    width: auto !important;
-    pointer-events: fill;
-    &.checkmark:hover {
-        -moz-filter: hue-rorate(225deg);
-        filter: hue-rotate(225deg);
-    }
 }
 table {
     border-spacing: 5px;

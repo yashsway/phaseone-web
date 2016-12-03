@@ -6,10 +6,12 @@ $(window).focus(function () {
 });
 function bind(){
     $("#talkToUs").on('click',function(){
-        $("#contact-bar").css({'display':'flex','top':'0px'});
+        $(".contact-bar").removeClass('contact-bar-hidden');
+        $(".contact-bar").addClass('contact-bar-shown');
     });
-    $("#contact-bar .close").on('click',function(){
-        $("#contact-bar").css({'display':'none','top':'-50px'});
+    $(".contact-bar .close").on('click',function(){
+        $(".contact-bar").removeClass('contact-bar-shown');
+        $(".contact-bar").addClass('contact-bar-hidden');
     });
 }
 bind();

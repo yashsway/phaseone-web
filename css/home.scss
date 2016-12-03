@@ -1,5 +1,7 @@
 @import "base.scss";
-#contact-bar {
+.contact-bar {
+    position: relative;
+    width: 100%;
     min-height: 50px;
     background-color: $secondary-alt-2-color;
     div {
@@ -7,20 +9,26 @@
         height: auto;
         padding: 5px;
     }
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+    &-hidden {
+        display: none;
+        top: -50px;
+        -webkit-transition: all 3s ease;
+        transition: all 3s ease;
+    }
+    &-shown {
+        display: flex;
+        top: 0px;
+        -webkit-transition: all 3s ease;
+        transition: all 3s ease;
+    }
 }
-
 section {
     padding: 20px;
 }
-
 .section-1 {
     max-height: 700px;
-}
-#contact-bar {
-    display: none;
-    top: -50px;
-    -webkit-transition: all 3s ease;
-    transition: all 3s ease;
 }
 .close {
     content: url('../assets/images/close.png');
@@ -96,14 +104,14 @@ section {
             border: none;
             clip: rect(0px,50px,100px,0px);
         }
-        @media screen and (max-width: 39.9375em) {
+        @include small-only {
             img {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
         }
-        @media screen and (min-width: 40em) {
+        @include medium-up {
             img {
                 float: right;
             }
@@ -116,13 +124,13 @@ section {
     position: inherit;
 }
 
+#talkToUs {
+    margin-right: 5px;
+}
 .page-home {
     #section-header {
         div {
             padding: 5px;
-        }
-        #talkToUs {
-            margin-right: 5px;
         }
     }
     #section-intro {
@@ -180,11 +188,9 @@ section {
     }
     .section-4 {
         .button {
-            height: 150px;
-            width: 300px;
+            padding: 30px 20px;
         }
         div:nth-child(3) {
-//            padding: 50px;
         }
     }
 }

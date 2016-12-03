@@ -23,10 +23,11 @@
 
 <body>
     <main id="main" class="m-scene">
-        <div class="row expanded align-spaced align-middle" id="contact-bar">
-            <div class="tagline-text small-12 medium-4 columns">We don't bite, say Hi!</div>
-            <div class="tagline-text small-12 medium-4 columns"> info@phaseone.org</div>
-            <div class="tagline-text small-12 medium-4 columns">Call us @ 555-555-5555</div>
+        <div class="row expanded align-spaced align-middle contact-bar contact-bar-hidden">
+            <div class="tagline-text small-12 medium-3 columns">We don't bite, say Hi!</div>
+            <div class="tagline-text small-12 medium-3 columns">hello@phaseone.io</div>
+            <div class="tagline-text small-12 medium-3 columns">We'll get back you within 48 hours.</div>
+            <div class="shrink columns"><img class="close"/></div>
         </div>
         <section class="row expanded align-spaced align-middle" id="section-header">
             <div class="small-12 medium-3 columns"></div>
@@ -58,7 +59,7 @@
                 </ul>
             </div>
             <div class="test 2small-12 medium-3 columns">
-                <button class="button float-right" id="talkToUs">Talk To Us</button>
+                <button class="button float-right" id="talkToUs"><a href="javascript:void(0);">Talk To Us</a></button>
             </div>
         </section>
         <div class="page page-affiliate scene-main scene-main--fadeinup">
@@ -73,26 +74,25 @@
             </section>
         </div>
         <section class="row expanded align-bottom align-justify" id="section-footer">
-            <div class="small-12 medium-4 columns" id="privacy">
+            <div class="small-12 medium-4" id="privacy">
                 <p class="description-text secondary-text-color center-text-small">Privacy Policy</p>
             </div>
-            <div class="small-12 medium-4 columns center-text" id="copyright">
+            <div class="small-12 medium-3 center-text" id="copyright">
                 <p class="description-text secondary-text-color">Independent organization founded at McMaster University, Copyright 2015</p>
             </div>
-            <div class="small-12 medium-4 columns" id="logo-footer">
+            <div class="small-12 medium-4" id="logo-footer">
                 <img src="assets/branding/logo/secondary-inverted-text.png" />
             </div>
         </section>
     </main>
-    <!--    jQuery 2.2.4-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <!--     jQuery 3x-->
-    <!--    <script src="bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>-->
+    <!--    jQuery 2x 3x-->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <!--<script src="bower_components/jquery/dist/jquery.js" type="application/javascript"></script>-->
     <script src="js/plugins.js"></script>
     <!--    Popmotion-->
     <script src="https://s3-us-west-2.amazonaws.com/popmotion/assets/js/5.0.11/popmotion.global.min.js" type="application/javascript"></script>
     <!--    Snapsvg-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="bower_components/Snap.svg/dist/snap.svg-min.js" type="application/javascript"></script>
     <!--    FlowType-->
     <script src="bower_components/Flowtype.js/flowtype.js" type="application/javascript"></script>
     <!-- SmoothState -->

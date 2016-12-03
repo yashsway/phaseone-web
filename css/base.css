@@ -1,8 +1,13 @@
+/* Small only */
+/* Medium up */
+/* Medium only */
+/* Large and up */
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  -webkit-box-sizing: "border-box";
+  -moz-box-sizing: "border-box";
+  box-sizing: "border-box"; }
 
 /*
 Custom Font Sets
@@ -56,8 +61,9 @@ textarea {
   padding: 0.2em 0; }
 
 .wrapper {
-  width: 90%;
-  margin: 0 5%; }
+  position: relative;
+  height: 100%;
+  width: 100%; }
 
 /* Default typography
 --------------------- */
@@ -154,19 +160,32 @@ a:active {
 a:visited {
   outline: 0; }
 
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+  a:active, a:focus {
+    color: inherit; }
+
 /*
 Default button styles
 ---------------------*/
 .button {
   margin: 0px;
+  padding: 0px;
   background: #FFFFFF;
   border: 2px solid #000000;
   min-height: 30px;
   vertical-align: middle;
   color: #000000;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .button a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px; }
 
 .button:hover {
   background: #000000;
@@ -176,11 +195,6 @@ Default button styles
   background: #000000;
   color: white;
   outline: none; }
-
-.button-link-color-inherit a {
-  color: inherit; }
-  .button-link-color-inherit a:hover, .button-link-color-inherit a:focus {
-    color: inherit; }
 
 /* Shared elements
 ------------------*/
@@ -202,14 +216,6 @@ img {
   height: 50px;
   width: auto !important;
   pointer-events: none; }
-
-.icon-small {
-  height: 25px;
-  width: auto !important;
-  pointer-events: fill; }
-  .icon-small.checkmark:hover {
-    -moz-filter: hue-rorate(225deg);
-    filter: hue-rotate(225deg); }
 
 table {
   border-spacing: 5px;

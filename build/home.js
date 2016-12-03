@@ -1,4 +1,90 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+"use strict";
 
-},{}]},{},[1])
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCJidWlsZC9ob21lLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FDQUEiLCJmaWxlIjoiZ2VuZXJhdGVkLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXNDb250ZW50IjpbIihmdW5jdGlvbiBlKHQsbixyKXtmdW5jdGlvbiBzKG8sdSl7aWYoIW5bb10pe2lmKCF0W29dKXt2YXIgYT10eXBlb2YgcmVxdWlyZT09XCJmdW5jdGlvblwiJiZyZXF1aXJlO2lmKCF1JiZhKXJldHVybiBhKG8sITApO2lmKGkpcmV0dXJuIGkobywhMCk7dmFyIGY9bmV3IEVycm9yKFwiQ2Fubm90IGZpbmQgbW9kdWxlICdcIitvK1wiJ1wiKTt0aHJvdyBmLmNvZGU9XCJNT0RVTEVfTk9UX0ZPVU5EXCIsZn12YXIgbD1uW29dPXtleHBvcnRzOnt9fTt0W29dWzBdLmNhbGwobC5leHBvcnRzLGZ1bmN0aW9uKGUpe3ZhciBuPXRbb11bMV1bZV07cmV0dXJuIHMobj9uOmUpfSxsLGwuZXhwb3J0cyxlLHQsbixyKX1yZXR1cm4gbltvXS5leHBvcnRzfXZhciBpPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7Zm9yKHZhciBvPTA7bzxyLmxlbmd0aDtvKyspcyhyW29dKTtyZXR1cm4gc30pIiwiIl19
+//Keep track of whether the browser tab or window is in focus. If not, pause animations and other background js processes for performance
+$(window).focus(function () {
+    window_focus = true;
+}).blur(function () {
+    window_focus = false;
+});
+function bind() {
+    $("#talkToUs").on('click', function () {
+        $(".contact-bar").css({ top: '200px' });
+        $(".contact-bar").removeClass('contact-bar-hidden');
+        $(".contact-bar").addClass('contact-bar-shown');
+    });
+    $(".contact-bar .close").on('click', function () {
+        $(".contact-bar").removeClass('contact-bar-shown');
+        $(".contact-bar").addClass('contact-bar-hidden');
+    });
+}
+bind();
+/*$("#talkToUs").on('click',function(){
+    console.log("cool");
+    $("#contact-bar").css('visibility','visible');
+    $("#contact-bar").css('top','0px');
+    $("#contact-bar").slideDown(3);
+});*/
+/*$('body').flowtype({
+ minimum   : 0,
+ maximum   : 1200,
+ minFont   : 8,
+ maxFont   : 18,
+ fontRatio : 40
+});*/
+//Toggle current for clicked menu links
+/*$(function (){
+    [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+        var menuItems = menu.querySelectorAll('.menu__link'),
+        setCurrent = function(ev) {
+            ev.preventDefault();
+
+                        var item = ev.target.parentNode; // li
+
+                        // return if already current
+                        if ($(item).hasClass('menu__item--current')) {
+                            return false;
+                        }
+                        // remove current
+                        $('.menu__item--current').removeClass('menu__item--current');
+                        // set current
+                        $(item).addClass('menu__item--current')
+                    };
+
+                    [].slice.call(menuItems).forEach(function(el) {
+                        el.addEventListener('click', setCurrent);
+                    });
+                });
+});
+$("#work").on('click',function(){
+    $(".page").load("work.html");
+});*/
+$(function () {
+    'use strict';
+
+    var $page = $('#main'),
+        options = {
+        debug: true,
+        prefetch: true,
+        cacheLength: 5,
+        onStart: {
+            duration: 350, // Duration of our animation
+            render: function render($container) {
+                // Add your CSS animation reversing class
+                $container.addClass('is-exiting');
+                // Restart your animation
+                smoothState.restartCSSAnimations();
+            }
+        },
+        onReady: {
+            duration: 0,
+            render: function render($container, $newContent) {
+                // Remove your CSS animation reversing class
+                $container.removeClass('is-exiting');
+                // Inject the new content
+                $container.html($newContent);
+                bind();
+            }
+        }
+    },
+        smoothState = $page.smoothState(options).data('smoothState');
+});
