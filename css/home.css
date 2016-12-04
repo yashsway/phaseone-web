@@ -214,8 +214,7 @@ img {
 
 .icon {
   height: 50px;
-  width: auto !important;
-  pointer-events: none; }
+  width: auto !important; }
 
 table {
   border-spacing: 5px;
@@ -254,7 +253,7 @@ table {
   .tiles * {
     margin: 0px; }
 
-.card {
+.card, .card-profile {
   height: 100%;
   width: 100%;
   text-align: left;
@@ -263,6 +262,9 @@ table {
   background: #DBDEE0;
   box-shadow: 0px 1px 1px 0px rgba(48, 68, 76, 0.75);
   border-radius: 3px; }
+
+.card-profile {
+  width: 200px; }
 
 /* Utilities
 --------------*/
@@ -509,9 +511,18 @@ section {
 .page-home #section-what .tiles p {
   padding-top: 20px; }
 
+/* All work page styles */
 .page-work .subtitle {
   text-align: center; }
-.page-work .card h2 {
+.page-work .card a, .page-work .card-profile a {
+  height: auto;
+  width: auto; }
+.page-work .card .icon, .page-work .card-profile .icon {
+  float: right;
+  height: 35px;
+  margin-top: 15px;
+  cursor: pointer; }
+.page-work .card h2, .page-work .card-profile h2 {
   margin-bottom: 20px; }
 .page-work .section-1 {
   height: 100vh;
@@ -525,6 +536,19 @@ section {
 .page-work .section-4 .button {
   padding: 30px 20px; }
 
+/* All team page styles */
+.page-team .section-2 .sub-team {
+  padding-top: 30px;
+  padding-bottom: 5px; }
+.page-team .section-2 .card-profile {
+  height: 180px;
+  margin: 10px 5px; }
+  .page-team .section-2 .card-profile a {
+    height: auto;
+    width: auto; }
+  .page-team .section-2 .card-profile .icon {
+    height: 30px;
+    cursor: pointer; }
 .page-team .section-1 {
   height: 100vh;
   width: 100%;

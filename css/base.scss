@@ -262,7 +262,6 @@ img {
 .icon {
     height: 50px;
     width: auto !important;
-    pointer-events: none;
 }
 table {
     border-spacing: 5px;
@@ -315,6 +314,10 @@ table {
     background: #DBDEE0;
     box-shadow: 0px 1px 1px 0px rgba(48,68,76,0.75);
     border-radius: 3px;
+}
+.card-profile {
+    @extend .card;
+    width: 200px;
 }
 /* Utilities
 --------------*/
