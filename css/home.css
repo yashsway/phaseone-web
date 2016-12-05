@@ -460,29 +460,52 @@ section {
 #section-footer {
   box-sizing: content-box;
   color: #FFFFF7;
-  height: 250px;
+  height: auto;
+  bottom: 0;
   background-color: #373F51;
-  padding-bottom: 0px;
+  padding: 15px 15px 5px 15px;
   border-bottom: 15px #373F51; }
   #section-footer #privacy {
     padding: 30px 0px 0px 0px; }
   #section-footer #copyright {
     padding: 30px 0px 0px 0px; }
   #section-footer #logo-footer {
-    padding: 30px 10px 20px 20px; }
+    padding: 30px 0px 10px 20px; }
     #section-footer #logo-footer img {
       height: auto;
       width: 300px;
       border: none;
       clip: rect(0px, 50px, 100px, 0px); }
     @media screen and (max-width: 48em) {
-      #section-footer #logo-footer img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto; } }
-    @media screen and (min-width: 48em) {
-      #section-footer #logo-footer img {
-        float: right; } }
+      #section-footer #logo-footer {
+        padding: 5px; } }
+  #section-footer .sitemap-box {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 80px;
+    padding: 10px 0px; }
+    #section-footer .sitemap-box .note-text {
+      font-size: 0.9;
+      color: #FFFFF7; }
+    #section-footer .sitemap-box .description-text {
+      font-size: 0.8;
+      color: #FFFFF7; }
+    #section-footer .sitemap-box .pages ul {
+      list-style: none;
+      list-style-image: none;
+      padding: 0;
+      margin: 0;
+      line-height: 25px; }
+  #section-footer .socialMedia-box {
+    float: right;
+    display: inline-block; }
+    #section-footer .socialMedia-box img {
+      margin: 5px 10px;
+      border: none; }
+    #section-footer .socialMedia-box .address {
+      text-align: center;
+      margin: 10px 0px;
+      display: block; }
 
 .page {
   display: inherit;
@@ -541,8 +564,15 @@ section {
   padding-top: 30px;
   padding-bottom: 5px; }
 .page-team .section-2 .card-profile {
-  height: 180px;
+  min-height: 180px;
   margin: 10px 5px; }
+  @media screen and (max-width: 48em) {
+    .page-team .section-2 .card-profile {
+      max-width: 130px; }
+      .page-team .section-2 .card-profile .secondary-title {
+        font-size: 1em; }
+      .page-team .section-2 .card-profile .note-text {
+        font-size: 0.8em; } }
   .page-team .section-2 .card-profile a {
     height: auto;
     width: auto; }

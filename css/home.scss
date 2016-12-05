@@ -86,9 +86,10 @@ section {
 #section-footer {
     box-sizing: content-box;
     color: $secondary-color;
-    height: 250px;
+    height: auto;
+    bottom: 0;
     background-color: $tertiary-color;
-    padding-bottom: 0px;
+    padding: 15px 15px 5px 15px;
     border-bottom: 15px $tertiary-color;
     #privacy {
         padding: 30px 0px 0px 0px;
@@ -97,7 +98,7 @@ section {
         padding: 30px 0px 0px 0px;
     }
     #logo-footer {
-        padding: 30px 10px 20px 20px;
+        padding: 30px 0px 10px 20px;
         img {
             height: auto;
             width: 300px;
@@ -105,16 +106,43 @@ section {
             clip: rect(0px,50px,100px,0px);
         }
         @include small-only {
-            img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+            padding: 5px;
+        }
+    }
+    .sitemap-box {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 80px;
+        padding: 10px 0px;
+        .note-text {
+            font-size: 0.9;
+            color: $secondary-color;
+        }
+        .description-text {
+            font-size: 0.8;
+            color: $secondary-color
+        }
+        .pages {
+            ul {
+                list-style: none;
+                list-style-image: none;
+                padding: 0;
+                margin: 0;
+                line-height: 25px;
             }
         }
-        @include medium-up {
-            img {
-                float: right;
-            }
+    }
+    .socialMedia-box {
+        float: right;
+        display: inline-block;
+        img {
+            margin: 5px 10px;
+            border: none;
+        }
+        .address {
+            text-align: center;
+            margin: 10px 0px;
+            display: block;
         }
     }
 }
@@ -212,8 +240,17 @@ section {
             padding-bottom: 5px;
         }
         .card-profile {
-            height: 180px;
+            min-height: 180px;
             margin: 10px 5px;
+            @include small-only {
+                max-width: 130px;
+                .secondary-title {
+                    font-size: 1em;
+                }
+                .note-text {
+                    font-size: 0.8em;
+                }
+            }
             a {
                 height: auto;
                 width: auto;
