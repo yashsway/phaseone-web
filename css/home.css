@@ -482,7 +482,7 @@ section {
   #section-footer .sitemap-box {
     display: inline-block;
     vertical-align: top;
-    margin-right: 80px;
+    margin-right: 50px;
     padding: 10px 0px; }
     #section-footer .sitemap-box .note-text {
       font-size: 0.9;
@@ -500,7 +500,7 @@ section {
     float: right;
     display: inline-block; }
     #section-footer .socialMedia-box img {
-      margin: 5px 10px;
+      margin: 5px 8px;
       border: none; }
     #section-footer .socialMedia-box .address {
       text-align: center;
