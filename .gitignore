@@ -1,4 +1,6 @@
 # Packages & libraries
+node_modules/
+dist/
 
 # caches
 .sass-cache
